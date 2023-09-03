@@ -1,0 +1,92 @@
+{
+   "uk": {
+      "text": {
+         "home": "Головна",
+         "about": "Про мене",
+         "portfolio": "Портфоліо",
+         "contact": "Зв'язатись зі мною",
+         "contact-via": "Зв'яжіться зі мною через:",
+         "name": "Ваше ім'я",
+         "surname": "Ваше прізвище",
+         "phone": "Номер телефону",
+         "company": "Компанія",
+         "email": "Електронна пошта",
+         "comment": "Коментарі,питання",
+         "send-to-email": "Надіслати на мою пошту",
+         "status-yes": "Дані надіслано.Дякую,що заповнили форму!",
+         "status-no": "Щось пішло не так :(",
+         "home-title": "Привіт! Я Максим Джосан",
+         "home-subtitle": "Я починаючий фронт-енд розробник",
+         "home-description": "Я наполегливий у навчанні та роботі і завжди готовий вчитися та переймати досвід інших розробників. Буду радий довгій та продуктивній співпраці!",
+         "tech-title": "Технології які я використовую",
+         "personal-info-title": "Особиста інформація",
+         "filter-all": "Усі",
+         "filter-commercial": "Комерційні",
+         "filter-pet": "Пет",
+         "no-project-text": "Результати відсутні для обраного фільтра"
+      },
+      "innerHTML": {
+         "$date-of-birth": "Дата народження: <time datetime=\"2002-09-27\">27 Вересня 2002</time>",
+         "$age": "Вік: <span class=\"personal-info__age\"></span>",
+         "$location": "Місцезнаходження: <a href=\"https://www.google.com.ua/maps/place/%D0%A0%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F,+%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+67400/@46.8546237,30.0749436,13z/data=!4m6!3m5!1s0x40c8e93ba54334a7:0xa896a346f704b6c0!8m2!3d46.8546237!4d30.0749436!16zL20vMDN5NXY4?entry=ttu\" target=\"_blank\" rel=\"noopener noreferrer\" >Роздільна, Одеська область, Україна</a >",
+         "$email": "Електронна пошта: <a href=\"mailto:dzhomaks@gmail.com\" >dzhomaks@gmail.com</a >",
+         "$phone": "Телефон: <a href=\"tel:+380997849835\">+38(099)-784-98-35</a>",
+         "$languages": "Мови: <span>Українська, Англійська, Російська</span>",
+         "$experience": "Комерційний досвід: <span>Відсутній</span>",
+         "$status": "Статус: <span>Готовий до співпраці та працевлаштування</span>"
+      },
+      "placeholders": {
+         "plh-name": "Ім'я",
+         "plh-surname": "Прізвище",
+         "plh-phone": "Телефон",
+         "plh-company": "Назва команії",
+         "plh-email": "Електронна пошта",
+         "plh-comment": "Ваш текст тут"
+      }
+   },
+   "en": {
+      "text": {
+         "home": "Home",
+         "about": "About me",
+         "portfolio": "Portfolio",
+         "contact": "Contact me",
+         "contact-via": "Contact via:",
+         "name": "Your name",
+         "surname": "Your surname",
+         "phone": "Phone number",
+         "company": "Company",
+         "email": "E-mail",
+         "comment": "Comments,questions",
+         "send-to-email": "Send to my e-mail",
+         "status-yes": "Data sended. Thank you for filling out this form!",
+         "status-no": "Something went wrong :(",
+         "home-title": "Hi! I am Maksym Dzhosan",
+         "home-subtitle": "I am beginner front-end developer",
+         "home-description": "I am zealous in studies and work and always ready to study and gain experience from other developers. I am looking forward to long-term and productive co-operation ",
+         "tech-title": "Technologies I use",
+         "personal-info-title": "Personal information",
+         "filter-all": "All",
+         "filter-commercial": "Commercial",
+         "filter-pet": "Pet",
+         "no-project-text": "No results for the selected filter"
+      },
+      "innerHTML": {
+         "$date-of-birth": "Date of birth: <time datetime=\"2002-09-27\">27 September 2002</time>",
+         "$age": "Age: <span class=\"personal-info__age\"></span>",
+         "$location": "Location: <a href=\"https://www.google.com.ua/maps/place/%D0%A0%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F,+%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+67400/@46.8546237,30.0749436,13z/data=!4m6!3m5!1s0x40c8e93ba54334a7:0xa896a346f704b6c0!8m2!3d46.8546237!4d30.0749436!16zL20vMDN5NXY4?entry=ttu\" target=\"_blank\" rel=\"noopener noreferrer\" >Rozdilna,Odesa region, Ukraine</a >",
+         "$email": "E-mail: <a href=\"mailto:dzhomaks@gmail.com\" >dzhomaks@gmail.com</a >",
+         "$phone": "Phone: <a href=\"tel:+380997849835\">+38(099)-784-98-35</a>",
+         "$languages": "Language: <span>Ukrainian, English, Russian</span>",
+         "$experience": "Commercial experience: <span>None</span>",
+         "$status": "Status: <span>Ready for co-operation and employment</span>"
+      },
+      "placeholders": {
+         "plh-name": "Name",
+         "plh-surname": "Surname",
+         "plh-phone": "Phone",
+         "plh-company": "Company name",
+         "plh-email": "E-mail",
+         "plh-comment": "Your text here"
+      }
+   }
+}
