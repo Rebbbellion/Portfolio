@@ -17,9 +17,12 @@ if (
 ) {
    document.documentElement.classList.add('dark');
 }
-
+//Language Change
+const languageChangeModule =
+   initialLoad['./jsModules/initialLoad/languageChange.js'];
 //EventListeners and Callbacks
 document.addEventListener('click', clickCallbacks);
+document.addEventListener('transitionend', transitionEndCallbacks);
 window.addEventListener('resize', bodyLockHandler);
 
 function clickCallbacks(e) {
@@ -35,6 +38,15 @@ function clickCallbacks(e) {
    }
    if (e.target.closest('#theme-pick')) {
       document.documentElement.classList.toggle('dark');
+      document.removeEventListener('click', clickCallbacks);
+   }
+   if (e.target.closest('[data-lng]') && !e.target.closest('active')) {
+      languageChangeModule.translateSite(e);
+   }
+}
+function transitionEndCallbacks(e) {
+   if (e.target.closest('svg.top-0') || e.target.closest('[data-lng="uk"]')) {
+      document.addEventListener('click', clickCallbacks);
    }
 }
 function bodyLockHandler() {

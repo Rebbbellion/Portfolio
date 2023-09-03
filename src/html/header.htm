@@ -8,11 +8,13 @@
       <div class="flex gap-1 text-4xl lg:text-3xl z-10">
          <button
             class="uppercase transition-colors duration-300 text-black dark:text-white active:text-red-600 dark:active:text-red-600"
+            data-lng="en"
          >
             en
          </button>
          <button
             class="uppercase active transition-colors duration-300 text-black dark:text-white active:text-red-600 dark:active:text-red-600"
+            data-lng="uk"
          >
             ua
          </button>
@@ -20,7 +22,10 @@
             class="block w-[2px] min-h-full bg-black dark:bg-white transition-colors duration-300 ml-3"
          ></span>
       </div>
-      <div id="theme-pick" class="relative z-10 w-9 h-9 top-0 left-0 overflow-hidden">
+      <div
+         id="theme-pick"
+         class="relative z-10 w-9 h-9 top-0 left-0 overflow-hidden"
+      >
          <svg
             class="absolute cursor-pointer top-full dark:top-0 transition-[top] duration-300 left-0 w-9 h-9 fill-white"
          >
@@ -45,6 +50,7 @@
                <a
                   href="#"
                   class="active inline-block text-black dark:text-white transition-all duration-300 hover:text-red-600 dark:hover:text-red-600 active:text-red-600 dark:active:text-red-600"
+						data-translation="home"
                   >Головна</a
                >
             </li>
@@ -52,6 +58,7 @@
                <a
                   href="#"
                   class="inline-block text-black dark:text-white transition-all duration-300 hover:text-red-600 dark:hover:text-red-600 active:text-red-600 dark:active:text-red-600"
+						data-translation="about"
                   >Про мене</a
                >
             </li>
@@ -59,12 +66,14 @@
                <a
                   href="#"
                   class="inline-block text-black dark:text-white transition-all duration-300 hover:text-red-600 dark:hover:text-red-600 active:text-red-600 dark:active:text-red-600"
+						data-translation="portfolio"
                   >Портфоліо</a
                >
             </li>
             <button
                data-dynad="#navigation,33,3"
                class="z-10 text-black dark:text-white transition-all duration-300 border-2 border-solid border-black dark:border-white p-2 hover:text-red-600 hover:border-red-600 dark:hover:text-red-600 dark:hover:border-red-600 528:col-start-4 528:col-end-5 528:text-3xl"
+					data-translation="contact"
             >
                Зв'язатись зі мною
             </button>
