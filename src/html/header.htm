@@ -1,1 +1,73 @@
-<header></header>
+<header
+   class="sticky top-0 left-0 z-50 bg-white dark:bg-black transition-colors duration-300 font-oswald"
+>
+   <nav
+      class="max-w-7xl mx-auto my-0 px-4 py-0 grid grid-cols-[repeat(2,min-content)_1fr_auto_min-content] items-center min-h-[80px] gap-x-4"
+   >
+      <div class="flex gap-1 text-4xl z-10">
+         <button
+            class="uppercase transition-colors duration-300 text-black dark:text-white active:text-red-600 dark:active:text-red-600"
+         >
+            en
+         </button>
+         <button
+            class="uppercase active transition-colors duration-300 text-black dark:text-white active:text-red-600 dark:active:text-red-600"
+         >
+            ua
+         </button>
+         <span
+            class="block w-[2px] min-h-full bg-black dark:bg-white transition-colors duration-300 ml-3"
+         ></span>
+      </div>
+      <div class="relative z-10 w-9 h-9 top-0 left-0 overflow-hidden">
+         <svg
+            class="absolute top-full dark:top-0 transition-[top] duration-300 left-0 w-9 h-9"
+         >
+            <use href="img/icons/sprite.svg#icon-moon"></use>
+         </svg>
+         <svg
+            class="absolute top-0 dark:top-full transition-[top] duration-300 left-0 w-9 h-9"
+         >
+            <use href="img/icons/sprite.svg#icon-sun"></use>
+         </svg>
+      </div>
+      <div
+         class="text-6xl fixed top-0 left-full w-full h-full bg-slate-300 dark:bg-slate-800 pt-24 px-5 overflow-auto"
+      >
+			<span class="fixed top-0 left-full w-full min-h-[80px] border-b-2 border-solid border-black dark:border-white bg-slate-300 dark:bg-slate-800"></span>
+         <ul class="grid gap-y-7 justify-start">
+            <li class="">
+               <a
+                  href="#"
+                  class="active inline-block text-black dark:text-white transition-all duration-300 hover:text-red-600 dark:hover:text-red-600 active:text-red-600 dark:active:text-red-600"
+                  >Головна</a
+               >
+            </li>
+            <li class="">
+               <a
+                  href="#"
+                  class="inline-block text-black dark:text-white transition-all duration-300 hover:text-red-600 dark:hover:text-red-600 active:text-red-600 dark:active:text-red-600"
+                  >Про мене</a
+               >
+            </li>
+            <li class="">
+               <a
+                  href="#"
+                  class="inline-block text-black dark:text-white transition-all duration-300 hover:text-red-600 dark:hover:text-red-600 active:text-red-600 dark:active:text-red-600"
+                  >Портфоліо</a
+               >
+            </li>
+            <button
+               class="z-10 text-black dark:text-white transition-all duration-300 border-2 border-solid border-black dark:border-white p-2 hover:text-red-600 hover:border-red-600 dark:hover:text-red-600 dark:hover:border-red-600"
+            >
+               Зв'язатись зі мною
+            </button>
+         </ul>
+      </div>
+      <button class="block relative w-8 h-6 col-start-5 col-end-6">
+         <span class="absolute top-0 left-0 w-full h-[2px] bg-black dark:bg-white transition-all duration-300"></span>
+         <span class="absolute top-1/2 -translate-y-1/2 left-0 w-full h-[2px] bg-black dark:bg-white transition-all duration-300"></span>
+         <span class="absolute bottom-0 left-0 w-full h-[2px] bg-black dark:bg-white transition-all duration-300"></span>
+      </button>
+   </nav>
+</header>
