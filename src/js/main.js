@@ -8,4 +8,20 @@ const dynamicLoad = import.meta.glob('./jsModules/dynamicLoad/*.js');
 const dynamicAdaptiveModule =
    initialLoad['./jsModules/initialLoad/dynamicAdaptive.js'];
 const dynad = new dynamicAdaptiveModule.DynamicAdapt('min');
-dynad.init()
+dynad.init();
+
+//EventListeners and Callbacks
+document.addEventListener('click', clickCallbacks);
+
+function clickCallbacks(e) {
+   if (e.target.closest('#burger')) {
+      dynamicLoad['./jsModules/dynamicLoad/bodyLock.js']().then(
+         (bodyLockModule) => {
+            if (bodyLockModule.bodyLockStatus) {
+               bodyLockModule.bodyLockToggle();
+               document.documentElement.classList.toggle('menu-open');
+            }
+         }
+      );
+   }
+}
