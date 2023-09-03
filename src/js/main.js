@@ -12,6 +12,7 @@ dynad.init();
 
 //EventListeners and Callbacks
 document.addEventListener('click', clickCallbacks);
+window.addEventListener('resize', bodyLockHandler);
 
 function clickCallbacks(e) {
    if (e.target.closest('#burger')) {
@@ -21,6 +22,19 @@ function clickCallbacks(e) {
                bodyLockModule.bodyLockToggle();
                document.documentElement.classList.toggle('menu-open');
             }
+         }
+      );
+   }
+}
+function bodyLockHandler() {
+   if (
+      matchMedia('(min-width:64rem)').matches &&
+      document.documentElement.classList.contains('menu-open')
+   ) {
+      dynamicLoad['./jsModules/dynamicLoad/bodyLock.js']().then(
+         (bodyLockModule) => {
+            bodyLockModule.bodyUnlock();
+            document.documentElement.classList.remove('menu-open');
          }
       );
    }

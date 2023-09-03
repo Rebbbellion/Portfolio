@@ -1,4 +1,4 @@
-function bodyLock(delay = 500) {
+export function bodyLock(delay = 500) {
    if (bodyLockStatus) {
       let body = document.body;
       body.style.paddingRight =
@@ -12,7 +12,7 @@ function bodyLock(delay = 500) {
       }, delay);
    }
 }
-function bodyUnlock(delay = 500) {
+export function bodyUnlock(delay = 500) {
    if (bodyLockStatus) {
       let body = document.body;
       body.style.paddingRight = '0px';
