@@ -9,6 +9,14 @@ const dynamicAdaptiveModule =
    initialLoad['./jsModules/initialLoad/dynamicAdaptive.js'];
 const dynad = new dynamicAdaptiveModule.DynamicAdapt('min');
 dynad.init();
+//Theme Change
+if (
+   matchMedia('prefers-color-scheme:dark').matches ||
+   new Date().getHours() >= 18 ||
+   new Date().getHours() <= 8
+) {
+   document.documentElement.classList.add('dark');
+}
 
 //EventListeners and Callbacks
 document.addEventListener('click', clickCallbacks);
@@ -24,6 +32,9 @@ function clickCallbacks(e) {
             }
          }
       );
+   }
+   if (e.target.closest('#theme-pick')) {
+      document.documentElement.classList.toggle('dark');
    }
 }
 function bodyLockHandler() {
