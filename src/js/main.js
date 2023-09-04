@@ -11,7 +11,7 @@ const dynad = new dynamicAdaptiveModule.DynamicAdapt('min');
 dynad.init();
 //Theme Change
 if (
-   matchMedia('prefers-color-scheme:dark').matches ||
+   matchMedia('(prefers-color-scheme: dark)').matches ||
    new Date().getHours() >= 18 ||
    new Date().getHours() <= 8
 ) {
@@ -20,36 +20,13 @@ if (
 //Language Change
 const languageChangeModule =
    initialLoad['./jsModules/initialLoad/languageChange.js'];
+//Popup
+const popup = document.getElementById('popup');
+const popupWrapper = document.getElementById('popup-wrapper');
 //EventListeners and Callbacks
 document.addEventListener('click', clickCallbacks);
 document.addEventListener('transitionend', transitionEndCallbacks);
-window.addEventListener('resize', bodyLockHandler);
-
-function clickCallbacks(e) {
-   if (e.target.closest('#burger')) {
-      dynamicLoad['./jsModules/dynamicLoad/bodyLock.js']().then(
-         (bodyLockModule) => {
-            if (bodyLockModule.bodyLockStatus) {
-               bodyLockModule.bodyLockToggle();
-               document.documentElement.classList.toggle('menu-open');
-            }
-         }
-      );
-   }
-   if (e.target.closest('#theme-pick')) {
-      document.documentElement.classList.toggle('dark');
-      document.removeEventListener('click', clickCallbacks);
-   }
-   if (e.target.closest('[data-lng]') && !e.target.closest('active')) {
-      languageChangeModule.translateSite(e);
-   }
-}
-function transitionEndCallbacks(e) {
-   if (e.target.closest('svg.top-0') || e.target.closest('[data-lng="uk"]')) {
-      document.addEventListener('click', clickCallbacks);
-   }
-}
-function bodyLockHandler() {
+window.addEventListener('resize', () => {
    if (
       matchMedia('(min-width:64rem)').matches &&
       document.documentElement.classList.contains('menu-open')
@@ -60,5 +37,62 @@ function bodyLockHandler() {
             document.documentElement.classList.remove('menu-open');
          }
       );
+   }
+});
+popup.addEventListener('click', popupClose);
+document.addEventListener('keydown', popupClose);
+
+function clickCallbacks(e) {
+   if (e.target.closest('#burger')) {
+      dynamicLoad['./jsModules/dynamicLoad/bodyLock.js']().then(
+         (bodyLockModule) => {
+            if (bodyLockModule.bodyLockStatus) {
+               bodyLockModule.bodyLockToggle();
+            }
+         }
+      );
+      document.documentElement.classList.toggle('menu-open');
+   }
+   if (e.target.closest('#theme-pick')) {
+      document.documentElement.classList.toggle('dark');
+      document.removeEventListener('click', clickCallbacks);
+   }
+   if (e.target.closest('[data-lng]') && !e.target.closest('active')) {
+      languageChangeModule.translateSite(e);
+   }
+   if (e.target.closest('#contact')) {
+      dynamicLoad['./jsModules/dynamicLoad/bodyLock.js']().then(
+         (bodyLockModule) => {
+            if (bodyLockModule.bodyLockStatus) {
+               if (!document.documentElement.classList.contains('lock')) {
+                  bodyLockModule.bodyLock();
+               }
+            }
+         }
+      );
+      popup.classList.add('active');
+   }
+}
+function transitionEndCallbacks(e) {
+   if (e.target.closest('svg.top-0') || e.target.closest('[data-lng="uk"]')) {
+      document.addEventListener('click', clickCallbacks);
+   }
+}
+function popupClose(e) {
+   if (
+      e.target.closest('#close-button') ||
+      e.target === popupWrapper ||
+      e.key === 'Escape'
+   ) {
+      popup.classList.remove('active');
+      if (!document.documentElement.classList.contains('menu-open')) {
+         dynamicLoad['./jsModules/dynamicLoad/bodyLock.js']().then(
+            (bodyLockModule) => {
+               if (bodyLockModule.bodyLockStatus) {
+                  bodyLockModule.bodyUnlock();
+               }
+            }
+         );
+      }
    }
 }

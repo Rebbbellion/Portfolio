@@ -38,8 +38,8 @@
       "placeholders": {
          "plh-name": "Ім'я",
          "plh-surname": "Прізвище",
-         "plh-phone": "Телефон",
-         "plh-company": "Назва команії",
+         "plh-phone": "Номер телефону починаючи з +",
+         "plh-company": "Назва компанії",
          "plh-email": "Електронна пошта",
          "plh-comment": "Ваш текст тут"
       }
@@ -83,7 +83,7 @@
       "placeholders": {
          "plh-name": "Name",
          "plh-surname": "Surname",
-         "plh-phone": "Phone",
+         "plh-phone": "Phone number starting from +",
          "plh-company": "Company name",
          "plh-email": "E-mail",
          "plh-comment": "Your text here"

@@ -4,7 +4,6 @@ import translations from '../../../translations.json';
 
 const elementsToTranslate = document.querySelectorAll('[data-translation]');
 const languageButtons = document.querySelectorAll('[data-lng]');
-
 i18next.use(LanguageDetector).init({
    detection: {
       order: ['navigator', 'localStorage', 'sessionStorage', 'querystring'],
