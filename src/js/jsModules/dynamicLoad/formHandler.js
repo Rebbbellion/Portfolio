@@ -26,6 +26,11 @@ inputsToValidate.forEach((input) => {
       }
       submitBtnToggle();
    };
+   i18next.on('languageChanged', () => {
+      setTimeout(() => {
+         input.nextElementSibling.lastChild.textContent = input.minLength;
+      }, 500);
+   });
 });
 
 function submitBtnToggle() {
@@ -75,7 +80,7 @@ export function sendForm(form) {
             submitBtnToggle();
             setTimeout(() => {
                submittedCoverElement.classList.remove('submitted');
-					submittedCoverElement.textContent = '';
+               submittedCoverElement.textContent = '';
             }, 3000);
          }, 2000);
       } else {

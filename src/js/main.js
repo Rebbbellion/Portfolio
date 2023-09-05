@@ -34,7 +34,7 @@ contactFormElement.onsubmit = (e) => {
       }
    );
 };
-//EventListeners and Callbacks
+//EventListeners,Observers and Callbacks
 document.addEventListener('click', clickCallbacks);
 document.addEventListener('transitionend', transitionEndCallbacks);
 window.addEventListener('resize', () => {
