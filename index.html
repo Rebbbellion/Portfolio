@@ -175,6 +175,7 @@
                         href="https://t.me/re_bbbellion"
                         target="_blank"
                         rel="noopener noreferrer"
+                        tabindex="1"
                      >
                         <svg class="w-11 h-11 fill-black dark:fill-white">
                            <use href="img/icons/sprite.svg#icon-telegram"></use>
@@ -184,6 +185,7 @@
                         href="https://www.instagram.com/re_bbbellion"
                         target="_blank"
                         rel="noopener noreferrer"
+                        tabindex="2"
                      >
                         <svg class="w-11 h-11 fill-black dark:fill-white">
                            <use
@@ -191,12 +193,12 @@
                            ></use>
                         </svg>
                      </a>
-                     <a href="tel:+380997849835">
+                     <a href="tel:+380997849835" tabindex="3">
                         <svg class="w-11 h-11 fill-black dark:fill-white">
                            <use href="img/icons/sprite.svg#icon-phone"></use>
                         </svg>
                      </a>
-                     <a href="mailto:dzhomaks@gmail.com">
+                     <a href="mailto:dzhomaks@gmail.com" tabindex="4">
                         <svg class="w-11 h-11 fill-black dark:fill-white">
                            <use href="img/icons/sprite.svg#icon-email"></use>
                         </svg>
@@ -207,11 +209,12 @@
                   ></span>
                </div>
                <form
-                  id="email-form"
+                  id="contact-form"
                   action="https://formspree.io/f/maygjonv"
                   method="post"
-                  enctype="multipart/form-data"
                   class="grid gap-y-4"
+                  enctype="multipart/form-data"
+                  autocomplete="off"
                >
                   <div class="flex flex-col gap-2 items-start">
                      <label
@@ -224,11 +227,19 @@
                         type="text"
                         name="Name"
                         id="name"
-                        class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black transition-colors duration-300 focus:border-red-600"
+                        class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black transition-colors duration-300 focus:border-red-600 relative peer"
                         required
                         placeholder="Ім'я"
                         data-translation="plh-name"
+                        minlength="2"
+                        maxlength="15"
+                        pattern="[a-zA-Zа-яА-яіІїЇєЄёЁ'\s]{0,15}"
+                        tabindex="5"
                      />
+                     <div
+                        class="hidden -mt-2 pl-3 w-full text-sm text-red-600 peer-[.error]:block"
+                        data-translation="$input-error"
+                     ></div>
                   </div>
                   <div class="flex flex-col gap-2 items-start">
                      <label
@@ -241,11 +252,19 @@
                         type="text"
                         name="Surname"
                         id="surname"
-                        class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black transition-colors duration-300 focus:border-red-600"
+                        class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black transition-colors duration-300 focus:border-red-600 peer"
                         required
                         placeholder="Прізвище"
                         data-translation="plh-surname"
+                        minlength="2"
+                        maxlength="15"
+                        pattern="[a-zA-Zа-яА-яіІїЇєЄёЁ'\s]{0,15}"
+                        tabindex="6"
                      />
+                     <div
+                        class="hidden -mt-2 pl-3 w-full text-sm text-red-600 peer-[.error]:block"
+                        data-translation="$input-error"
+                     ></div>
                   </div>
                   <div class="flex flex-col gap-2 items-start">
                      <label
@@ -256,13 +275,21 @@
                      >
                      <input
                         type="tel"
-                        name="phone"
-                        id="Phone"
-                        class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black transition-colors duration-300 focus:border-red-600"
+                        name="Phone"
+                        id="phone"
+                        class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black transition-colors duration-300 focus:border-red-600 peer"
                         required
                         placeholder="Починаючи з +"
                         data-translation="plh-phone"
+                        minlength="8"
+                        maxlength="20"
+                        pattern="^\+[0-9]{0,20}"
+                        tabindex="7"
                      />
+                     <div
+                        class="hidden -mt-2 pl-3 w-full text-sm text-red-600 peer-[.error]:block"
+                        data-translation="$input-error"
+                     ></div>
                   </div>
                   <div class="flex flex-col gap-2 items-start">
                      <label
@@ -275,11 +302,19 @@
                         type="email"
                         name="email"
                         id="E-mail"
-                        class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black transition-colors duration-300 focus:border-red-600"
+                        class="w-full h-12 p-3 outline-none border-2 border-solid peer border-black/50 rounded-xl dark:caret-black transition-colors duration-300 focus:border-red-600"
                         required
+                        minlength="6"
+                        maxlength="30"
                         placeholder="Електронна пошта"
                         data-translation="plh-email"
+                        pattern="[a-z0-9\-]+@?[a-z0-9\-\.]{0,30}"
+                        tabindex="8"
                      />
+                     <div
+                        class="hidden -mt-2 pl-3 w-full text-sm text-red-600 peer-[.error]:block"
+                        data-translation="$input-error"
+                     ></div>
                   </div>
                   <div class="flex flex-col gap-2 items-start">
                      <label
@@ -295,6 +330,7 @@
                         class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black transition-colors duration-300 focus:border-red-600"
                         placeholder="Назва компанії"
                         data-translation="plh-company"
+                        tabindex="9"
                      />
                   </div>
                   <div class="flex flex-col gap-2 items-start">
@@ -311,12 +347,15 @@
                         class="w-full p-3 outline-none border-2 border-solid resize-none border-black/50 rounded-xl dark:caret-black transition-colors duration-300 focus:border-red-600"
                         placeholder="Назва компанії"
                         data-translation="plh-comment"
+                        tabindex="10"
                      ></textarea>
                   </div>
                   <button
                      type="submit"
-                     class="outline-none border-2 border-solid transition-colors duration-300 focus:border-red-600 focus:text-red-600 dark:focus:border-red-600 dark:focus:text-red-600 hover:border-red-600 hover:text-red-600 dark:hover:border-red-600 dark:hover:text-red-600 border-black dark:border-white rounded-xl text-black dark:text-white text-xl p-2"
+                     class="outline-none border-2 border-solid transition-all duration-300 focus:border-red-600 focus:text-red-600 dark:focus:border-red-600 dark:focus:text-red-600 hover:border-red-600 hover:text-red-600 dark:hover:border-red-600 dark:hover:text-red-600 border-black dark:border-white rounded-xl text-black dark:text-white text-xl p-2 disabled:opacity-40 disabled:focus:border-black dark:disabled:focus:border-white disabled:focus:text-black dark:disabled:focus:text-white disabled:hover:border-black dark:disabled:hover:border-white disabled:hover:text-black dark:disabled:hover:text-white"
                      data-translation="send-to-email"
+                     disabled="true"
+                     tabindex="11"
                   >
                      Відправити на мою пошту
                   </button>
