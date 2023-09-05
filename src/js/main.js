@@ -24,6 +24,16 @@ const languageChangeModule =
 const popup = document.getElementById('popup');
 const popupWrapper = document.getElementById('popup-wrapper');
 const popupContent = document.getElementById('popup-content');
+//ContactForm
+const contactFormElement = document.getElementById('contact-form');
+contactFormElement.onsubmit = (e) => {
+   e.preventDefault();
+   dynamicLoad['./jsModules/dynamicLoad/formHandler.js']().then(
+      (formHandlerModule) => {
+         formHandlerModule.sendForm(e.target);
+      }
+   );
+};
 //EventListeners and Callbacks
 document.addEventListener('click', clickCallbacks);
 document.addEventListener('transitionend', transitionEndCallbacks);
@@ -71,10 +81,10 @@ function clickCallbacks(e) {
             }
          }
       );
-      dynamicLoad['./jsModules/dynamicLoad/formValidation.js']();
+      dynamicLoad['./jsModules/dynamicLoad/formHandler.js']();
       popup.classList.add('active');
       popup.removeEventListener('click', popupClose);
-		document.removeEventListener('keydown', popupClose);
+      document.removeEventListener('keydown', popupClose);
    }
 }
 function transitionEndCallbacks(e) {
@@ -82,9 +92,8 @@ function transitionEndCallbacks(e) {
       document.addEventListener('click', clickCallbacks);
    }
    if (e.target === popupContent) {
-      console.log('Hi');
       popup.addEventListener('click', popupClose);
-		document.addEventListener('keydown', popupClose);
+      document.addEventListener('keydown', popupClose);
    }
 }
 function popupClose(e) {

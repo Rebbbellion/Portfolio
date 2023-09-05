@@ -148,7 +148,7 @@
             id="popup-wrapper"
          >
             <div
-					id="popup-content"
+               id="popup-content"
                class="relative w-full bg-white dark:bg-black py-5 px-4 grid grid-rows-[auto_1fr] gap-y-3 -translate-y-[150%] group-[.active]:translate-y-0 transition-transform duration-1000 delay-200 sm:w-1/2"
             >
                <button
@@ -212,9 +212,9 @@
                   id="contact-form"
                   action="https://formspree.io/f/maygjonv"
                   method="post"
-                  class="grid gap-y-4"
+                  class="grid gap-y-4 relative"
                   enctype="multipart/form-data"
-                  autocomplete="off"
+						autocomplete="off"
                >
                   <div class="flex flex-col gap-2 items-start">
                      <label
@@ -359,6 +359,10 @@
                   >
                      Відправити на мою пошту
                   </button>
+                  <div
+                     id="submitted-cover"
+                     class="absolute flex text-center justify-center items-center top-0 left-0 w-full h-full transition-all duration-300 bg-white dark:bg-black text-black dark:text-white text-2xl opacity-0 invisible submitted:visible submitted:opacity-100"
+                  ></div>
                </form>
             </div>
          </div>
