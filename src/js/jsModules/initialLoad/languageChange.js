@@ -22,8 +22,7 @@ i18next.changeLanguage().then((t) => {
          element.innerHTML = t(element.dataset.translation, {
             ns: 'innerHTML',
          });
-      }
-      if (element.dataset.translation.includes('plh-')) {
+      } else if (element.dataset.translation.includes('plh-')) {
          element.placeholder = t(element.dataset.translation, {
             ns: 'placeholders',
          });
@@ -64,8 +63,7 @@ export function translateSite(e) {
                });
                element.style.opacity = 1;
             }, 300);
-         }
-         if (element.dataset.translation.includes('plh-')) {
+         } else if (element.dataset.translation.includes('plh-')) {
             setTimeout(() => {
                element.placeholder = t(element.dataset.translation, {
                   ns: 'placeholders',
