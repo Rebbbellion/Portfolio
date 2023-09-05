@@ -10,12 +10,6 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-package-lock.json
-package.json
-postcss.config.js
-svgo-cfg.cjs
-tailwind.config.js
-vite.config.js
 
 *.local
 
