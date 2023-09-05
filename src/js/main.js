@@ -23,6 +23,7 @@ const languageChangeModule =
 //Popup
 const popup = document.getElementById('popup');
 const popupWrapper = document.getElementById('popup-wrapper');
+const popupContent = document.getElementById('popup-content');
 //EventListeners and Callbacks
 document.addEventListener('click', clickCallbacks);
 document.addEventListener('transitionend', transitionEndCallbacks);
@@ -70,12 +71,20 @@ function clickCallbacks(e) {
             }
          }
       );
+      dynamicLoad['./jsModules/dynamicLoad/formValidation.js']();
       popup.classList.add('active');
+      popup.removeEventListener('click', popupClose);
+		document.removeEventListener('keydown', popupClose);
    }
 }
 function transitionEndCallbacks(e) {
    if (e.target.closest('svg.top-0') || e.target.closest('[data-lng="uk"]')) {
       document.addEventListener('click', clickCallbacks);
+   }
+   if (e.target === popupContent) {
+      console.log('Hi');
+      popup.addEventListener('click', popupClose);
+		document.addEventListener('keydown', popupClose);
    }
 }
 function popupClose(e) {
