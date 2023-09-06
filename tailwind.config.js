@@ -24,6 +24,7 @@ export default {
          addVariant('menu-open', '.menu-open &');
          addVariant('lock', '.lock &');
          addVariant('submitted', '&.submitted');
+         addVariant('scrolled', '.scrolled &');
       }),
    ],
 };

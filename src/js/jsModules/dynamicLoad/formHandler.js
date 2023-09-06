@@ -18,7 +18,7 @@ inputsToValidate.forEach((input) => {
             input.classList.add('error');
             input.nextElementSibling.lastChild.textContent = input.minLength;
          }
-      }, 2000);
+      }, 4000);
       if (input.classList.contains('error')) {
          if (input.value.length >= input.minLength) {
             input.classList.remove('error');
