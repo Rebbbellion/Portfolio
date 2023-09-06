@@ -2,7 +2,7 @@ const header = document.querySelector('header');
 const wrapper = document.getElementById('wrapper');
 const options = {
    root: wrapper,
-   rootMargin: '-60px 0px 0px 0px',
+   rootMargin: '-50px 0px 0px 0px',
    threshold: 1.0,
 };
 

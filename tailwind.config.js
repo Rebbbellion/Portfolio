@@ -15,6 +15,7 @@ export default {
             md: '48rem',
             lg: '64rem',
             528: '33rem',
+            825: '51.5625rem',
          },
       },
    },
