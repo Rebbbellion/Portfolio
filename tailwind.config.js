@@ -26,6 +26,8 @@ export default {
          addVariant('lock', '.lock &');
          addVariant('submitted', '&.submitted');
          addVariant('scrolled', '.scrolled &');
+         addVariant('mobile', '.mobile &');
+         addVariant('pc', '.pc &');
       }),
    ],
 };

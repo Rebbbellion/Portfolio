@@ -34,6 +34,10 @@ contactFormElement.onsubmit = (e) => {
       }
    );
 };
+//Swiper
+if (document.documentElement.classList.contains('mobile')) {
+   dynamicLoad['./jsModules/dynamicLoad/swiper.js']();
+}
 //EventListeners,Observers and Callbacks
 document.addEventListener('click', clickCallbacks);
 document.addEventListener('transitionend', transitionEndCallbacks);
@@ -85,6 +89,13 @@ function clickCallbacks(e) {
       popup.classList.add('active');
       popup.removeEventListener('click', popupClose);
       document.removeEventListener('keydown', popupClose);
+   }
+   if (e.target.closest('#filters>button') && !e.target.closest('active')) {
+      dynamicLoad['./jsModules/dynamicLoad/filter.js']().then(
+         (filtersModule) => {
+            filtersModule.filterButtonToggle(e);
+         }
+      );
    }
 }
 function transitionEndCallbacks(e) {
