@@ -22,4 +22,5 @@ const swiper = new Swiper('.swiper', {
       clickable: true,
       dynamicBullets: true,
    },
+   observer: true,
 });

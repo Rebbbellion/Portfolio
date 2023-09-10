@@ -1,39 +1,64 @@
-<section class="grid py-7 gap-6 grid-rows-[min-content_1fr]">
+<section class="grid py-10 gap-6 grid-rows-[min-content_1fr]">
    <h2
       class="text-4xl text-black dark:text-white transition-all duration-300 justify-self-center font-bold"
    >
       Portfolio
    </h2>
-   <div id="filters" class="flex gap-3 text-2xl font-oswald">
+   <div
+      id="filters"
+      class="flex gap-x-3 gap-y-5 text-2xl font-oswald flex-wrap"
+   >
       <button
          class="active active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl"
          data-filter="all"
+         data-translation="filter-all"
       >
          Усі
       </button>
       <button
          class="active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl"
-         data-filter="pet"
+         data-filter="type:pet"
+         data-translation="filter-pet"
       >
          Пет
       </button>
       <button
          class="active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl"
-         data-filter="commercial"
+         data-filter="type:commercial"
+         data-translation="filter-commercial"
       >
          Комерційні
       </button>
-   </div>
-   <div class="swiper w-full min-w-0">
-      <ul
-         class="swiper-wrapper mobile:pb-14 pc:grid pc:grid-cols-[repeat(auto-fit,minmax(320px,1fr))] pc:gap-6"
+      <button
+         class="active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl"
+         data-filter="year:2023"
       >
-         <li class="swiper-slide" data-filter="pet">
+         2023
+      </button>
+      <button
+         class="active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl"
+         data-filter="year:2024"
+      >
+         2024
+      </button>
+   </div>
+   <div
+      id="no-match"
+      class="relative top-0 left-0 w-full h-full opacity-0 hidden text-center text-black dark:text-white transition-all duration-300 text-4xl"
+   >
+      Результати відсутні
+   </div>
+   <div class="swiper w-full min-w-0 pc:relative">
+      <ul
+         class="swiper-wrapper mobile:pb-14 pc:grid pc:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] pc:gap-6"
+         id="filter-elements"
+      >
+         <li class="swiper-slide" data-filter="type:pet,year:2023">
             <a
                href="#"
                target="_blank"
                rel="noopener noreferrer"
-               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-colors duration-300"
+               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
             >
                <figure>
                   <img
@@ -52,12 +77,60 @@
                ></span>
             </a>
          </li>
-         <li class="swiper-slide">
+         <li class="swiper-slide" data-filter="type:commercial,year:2023">
             <a
                href="#"
                target="_blank"
                rel="noopener noreferrer"
-               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-colors duration-300"
+               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
+            >
+               <figure>
+                  <img
+                     class="absolute top-0 left-0 w-full h-full object-cover"
+                     src="img/portfolio/empty.webp"
+                     alt="empty"
+                  />
+                  <figcaption
+                     class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
+                  >
+                     Project Name
+                  </figcaption>
+               </figure>
+               <span
+                  class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full"
+               ></span>
+            </a>
+         </li>
+         <li class="swiper-slide" data-filter="type:pet,year:2023">
+            <a
+               href="#"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
+            >
+               <figure>
+                  <img
+                     class="absolute top-0 left-0 w-full h-full object-cover"
+                     src="img/portfolio/empty.webp"
+                     alt="empty"
+                  />
+                  <figcaption
+                     class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
+                  >
+                     Project Name
+                  </figcaption>
+               </figure>
+               <span
+                  class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full"
+               ></span>
+            </a>
+         </li>
+         <li class="swiper-slide" data-filter="type:commercial,year:2023">
+            <a
+               href="#"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
             >
                <figure>
                   <img
@@ -81,7 +154,7 @@
                href="#"
                target="_blank"
                rel="noopener noreferrer"
-               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-colors duration-300"
+               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
             >
                <figure>
                   <img
@@ -105,7 +178,7 @@
                href="#"
                target="_blank"
                rel="noopener noreferrer"
-               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-colors duration-300"
+               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
             >
                <figure>
                   <img
@@ -129,7 +202,7 @@
                href="#"
                target="_blank"
                rel="noopener noreferrer"
-               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-colors duration-300"
+               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
             >
                <figure>
                   <img
@@ -153,7 +226,7 @@
                href="#"
                target="_blank"
                rel="noopener noreferrer"
-               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-colors duration-300"
+               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
             >
                <figure>
                   <img

@@ -90,12 +90,13 @@ function clickCallbacks(e) {
       popup.removeEventListener('click', popupClose);
       document.removeEventListener('keydown', popupClose);
    }
-   if (e.target.closest('#filters>button') && !e.target.closest('active')) {
+   if (e.target.closest('#filters>button')) {
       dynamicLoad['./jsModules/dynamicLoad/filter.js']().then(
          (filtersModule) => {
             filtersModule.filterButtonToggle(e);
          }
       );
+      document.removeEventListener('click', clickCallbacks);
    }
 }
 function transitionEndCallbacks(e) {
@@ -105,6 +106,9 @@ function transitionEndCallbacks(e) {
    if (e.target === popupContent) {
       popup.addEventListener('click', popupClose);
       document.addEventListener('keydown', popupClose);
+   }
+   if (e.target.closest('#filters>button')) {
+      document.addEventListener('click', clickCallbacks);
    }
 }
 function popupClose(e) {
