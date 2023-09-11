@@ -4,14 +4,53 @@ const activeFilters = [
    ['type:', new Set()],
    ['year:', new Set()],
 ];
+
+function filterButtonToggle(targetEl) {
+   const filterButtons = document.querySelectorAll('#filters>button');
+   const allButton = document.querySelector('[data-filter="all"]');
+   if (targetEl !== allButton) {
+      allButton.classList.remove('active');
+      targetEl.classList.toggle('active');
+   }
+   const activeButtons = document.querySelectorAll('#filters>button.active');
+   if (targetEl === allButton || activeButtons.length === 0) {
+      filterButtons.forEach((btn) => {
+         if (btn.classList.contains('active')) {
+            btn.classList.remove('active');
+         }
+      });
+      allButton.classList.add('active');
+   }
+   setActiveFilters(filterButtons);
+   filterElements(elementsToFilter);
+}
+
+function setActiveFilters(filterButtons) {
+   filterButtons.forEach((btn) => {
+      activeFilters.forEach(([filter, set]) => {
+         if (
+            btn.classList.contains('active') &&
+            btn.dataset.filter.includes(filter)
+         ) {
+            set.add(btn.dataset.filter);
+         } else {
+            set.delete(btn.dataset.filter);
+         }
+      });
+   });
+}
+
 function filterElements(elements) {
    const noMatchEl = document.getElementById('no-match');
    const matchingElements = getMatchingElements(elements, activeFilters);
    const existingElements = [...elementsParent.children];
+
    if (matchingElements.length === 0) {
-      noMatchEl.style.display = 'block';
       setTimeout(() => {
-         noMatchEl.style.opacity = 1;
+         noMatchEl.style.display = 'block';
+         setTimeout(() => {
+            noMatchEl.style.opacity = 1;
+         }, 100);
       }, 300);
    } else {
       noMatchEl.style.opacity = 0;
@@ -19,6 +58,7 @@ function filterElements(elements) {
          noMatchEl.style.display = 'none';
       }, 300);
    }
+
    elements.forEach((elem) => {
       if (matchingElements.includes(elem)) {
          if (!existingElements.includes(elem)) {
@@ -34,37 +74,6 @@ function filterElements(elements) {
          }, 500);
       }
    });
-}
-
-export function filterButtonToggle(e) {
-   const filterButtons = document.querySelectorAll('#filters>button');
-   const allButton = document.querySelector('[data-filter="all"]');
-   if (e.target !== allButton) {
-      allButton.classList.remove('active');
-      e.target.classList.toggle('active');
-   }
-   const activeButtons = document.querySelectorAll('#filters>button.active');
-   if (e.target === allButton || activeButtons.length === 0) {
-      filterButtons.forEach((btn) => {
-         if (btn.classList.contains('active')) {
-            btn.classList.remove('active');
-         }
-      });
-      allButton.classList.add('active');
-   }
-   filterButtons.forEach((btn) => {
-      activeFilters.forEach(([filter, set]) => {
-         if (
-            btn.classList.contains('active') &&
-            btn.dataset.filter.includes(filter)
-         ) {
-            set.add(btn.dataset.filter);
-         } else {
-            set.delete(btn.dataset.filter);
-         }
-      });
-   });
-   filterElements(elementsToFilter);
 }
 
 function getMatchingElements(elements, filters, filterNumber = 0) {
@@ -86,3 +95,5 @@ function getMatchingElements(elements, filters, filterNumber = 0) {
 
    return getMatchingElements(temp, filters, ++filterNumber);
 }
+
+export { filterButtonToggle };

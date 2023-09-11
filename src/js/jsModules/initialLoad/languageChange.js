@@ -4,6 +4,7 @@ import translations from '../../../translations.json';
 
 const elementsToTranslate = document.querySelectorAll('[data-translation]');
 const languageButtons = document.querySelectorAll('[data-lng]');
+
 i18next.use(LanguageDetector).init({
    detection: {
       order: ['navigator', 'localStorage', 'sessionStorage', 'querystring'],
@@ -15,45 +16,13 @@ i18next.use(LanguageDetector).init({
    resources: translations,
 });
 
-i18next.changeLanguage().then((t) => {
-   languageButtonToggle(null, i18next.resolvedLanguage);
-   elementsToTranslate.forEach((element) => {
-      if (element.dataset.translation.includes('$')) {
-         element.innerHTML = t(element.dataset.translation, {
-            ns: 'innerHTML',
-         });
-      } else if (element.dataset.translation.includes('plh-')) {
-         element.placeholder = t(element.dataset.translation, {
-            ns: 'placeholders',
-         });
+function translateSite(targetEl) {
+   i18next.changeLanguage(targetEl?.dataset.lng).then((t) => {
+      if (!targetEl) {
+         languageButtonToggle(null, i18next.resolvedLanguage);
       } else {
-         element.textContent = t(element.dataset.translation, {
-            ns: 'text',
-         });
+         languageButtonToggle(targetEl);
       }
-   });
-});
-
-function languageButtonToggle(e, activeLng) {
-   languageButtons.forEach((button) => {
-      if (!activeLng) {
-         if (button.classList.contains('active')) {
-            button.classList.remove('active');
-         }
-         e.target.classList.add('active');
-      } else {
-         if (button.dataset.lng !== activeLng) {
-            button.classList.remove('active');
-         } else {
-            button.classList.add('active');
-         }
-      }
-   });
-}
-
-export function translateSite(e) {
-   languageButtonToggle(e);
-   i18next.changeLanguage(e.target.dataset.lng).then((t) => {
       elementsToTranslate.forEach((element) => {
          element.style.opacity = 0;
          if (element.dataset.translation.includes('$')) {
@@ -81,3 +50,24 @@ export function translateSite(e) {
       });
    });
 }
+
+function languageButtonToggle(targetEl, activeLng) {
+   languageButtons.forEach((button) => {
+      if (!activeLng) {
+         if (button.classList.contains('active')) {
+            button.classList.remove('active');
+         }
+         targetEl.classList.add('active');
+      } else {
+         if (button.dataset.lng !== activeLng) {
+            button.classList.remove('active');
+         } else {
+            button.classList.add('active');
+         }
+      }
+   });
+}
+
+translateSite();
+
+export { translateSite };

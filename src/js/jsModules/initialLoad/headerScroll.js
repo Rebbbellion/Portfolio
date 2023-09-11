@@ -5,8 +5,9 @@ const options = {
    rootMargin: '-50px 0px 0px 0px',
    threshold: 1.0,
 };
+const observer = new IntersectionObserver(callBack, options);
 
-function callBack(entries, observer) {
+function callBack(entries) {
    entries.forEach((entry) => {
       if (entry.isIntersecting) {
          header.classList.add('scrolled');
@@ -15,7 +16,5 @@ function callBack(entries, observer) {
       }
    });
 }
-
-const observer = new IntersectionObserver(callBack, options);
 
 observer.observe(header);

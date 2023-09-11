@@ -1,4 +1,14 @@
-export function bodyLock(delay = 500) {
+let bodyLockStatus = true;
+
+function bodyLockToggle(delay = 500) {
+   if (document.documentElement.classList.contains('lock')) {
+      bodyUnlock(delay);
+   } else {
+      bodyLock(delay);
+   }
+}
+
+function bodyLock(delay = 500) {
    if (bodyLockStatus) {
       let body = document.body;
       const lockElements = document.querySelectorAll('[data-lock]');
@@ -21,7 +31,8 @@ export function bodyLock(delay = 500) {
       }, delay);
    }
 }
-export function bodyUnlock(delay = 500) {
+
+function bodyUnlock(delay = 500) {
    if (bodyLockStatus) {
       let body = document.body;
       const lockElements = document.querySelectorAll('[data-lock]');
@@ -39,11 +50,5 @@ export function bodyUnlock(delay = 500) {
       }, delay);
    }
 }
-export let bodyLockStatus = true;
-export function bodyLockToggle(delay = 500) {
-   if (document.documentElement.classList.contains('lock')) {
-      bodyUnlock(delay);
-   } else {
-      bodyLock(delay);
-   }
-}
+
+export { bodyLockToggle, bodyLock, bodyUnlock };

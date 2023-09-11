@@ -7,6 +7,7 @@ export class DynamicAdapt {
    constructor(type) {
       this.#type = type;
    }
+
    init() {
       this.#оbjects = [];
       this.#movedElClass = 'moved';
@@ -44,6 +45,7 @@ export class DynamicAdapt {
          this.#mediaHandler(matchMedia, оbjectsFilter);
       });
    }
+
    #mediaHandler(matchMedia, оbjects) {
       if (matchMedia.matches) {
          оbjects.forEach((оbject) => {
@@ -58,6 +60,7 @@ export class DynamicAdapt {
          });
       }
    }
+
    #moveTo(place, element, destination) {
       element.classList.add(this.#movedElClass);
       if (place === 'last' || place >= destination.children.length) {
@@ -70,6 +73,7 @@ export class DynamicAdapt {
       }
       destination.children[place].before(element);
    }
+
    #moveBack(parent, element, index) {
       element.classList.remove(this.#movedElClass);
       if (parent.children[index] !== undefined) {
@@ -78,6 +82,7 @@ export class DynamicAdapt {
          parent.append(element);
       }
    }
+
    #indexInParent(parent, element) {
       return [...parent.children].indexOf(element);
    }

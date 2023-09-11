@@ -24,6 +24,7 @@ const isMobile = {
       );
    },
 };
+
 function addTouchClass() {
    if (isMobile.any()) {
       document.documentElement.classList.add('mobile');
@@ -31,4 +32,5 @@ function addTouchClass() {
       document.documentElement.classList.add('pc');
    }
 }
+
 addTouchClass();

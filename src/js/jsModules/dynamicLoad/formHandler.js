@@ -1,5 +1,6 @@
 import i18next from 'i18next';
 
+const contactFormElement = document.getElementById('contact-form');
 const submittedCoverElement = document.getElementById('submitted-cover');
 const LOAD_GIF_URL =
    'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTZxOGMxNzVqaHBxZWdoMWx5ODhqcXN3b2pndWtjeWl4bjc3dWp1eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/FgH5xSNjGHZsiYPWAX/giphy.gif';
@@ -9,6 +10,7 @@ const submitButton = document.querySelector('button[type="submit"]');
 
 inputsToValidate.forEach((input) => {
    input.onpaste = (e) => e.preventDefault();
+
    input.oninput = () => {
       const regExp = new RegExp(input.pattern, 'g');
       const inputField = input.value.match(regExp) ?? [];
@@ -26,6 +28,7 @@ inputsToValidate.forEach((input) => {
       }
       submitBtnToggle();
    };
+
    i18next.on('languageChanged', () => {
       setTimeout(() => {
          input.nextElementSibling.lastChild.textContent = input.minLength;
@@ -55,7 +58,7 @@ function submitBtnToggle() {
    }
 }
 
-export function sendForm(form) {
+function sendForm(form) {
    const data = new FormData(form);
    const imgElement = document.createElement('img');
    imgElement.style.cssText =
@@ -98,3 +101,8 @@ export function sendForm(form) {
       }
    });
 }
+
+contactFormElement.onsubmit = (e) => {
+   e.preventDefault();
+   sendForm(contactFormElement);
+};
