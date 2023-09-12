@@ -42,7 +42,7 @@ function clickCallbacks(e) {
    }
    if (e.target.closest('[data-lng]') && !e.target.closest('.active')) {
       languageChangeModule.translateSite(e.target);
-		document.removeEventListener('click', clickCallbacks);
+      document.removeEventListener('click', clickCallbacks);
    }
    if (e.target.closest('#contact')) {
       dynamicLoad['./jsModules/dynamicLoad/popup.js']().then((popupModule) => {
@@ -57,6 +57,14 @@ function clickCallbacks(e) {
          }
       );
       document.removeEventListener('click', clickCallbacks);
+   }
+   if (e.target.closest('.header-link')) {
+      e.preventDefault();
+      dynamicLoad['./jsModules/dynamicLoad/scrollToBlock.js']().then(
+         (scrollToBlockModule) => {
+            scrollToBlockModule.scrollToBlock(e.target);
+         }
+      );
    }
 }
 

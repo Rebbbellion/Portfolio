@@ -18,3 +18,7 @@
 .dark .swiper-pagination {
    --swiper-pagination-bullet-inactive-color: #fff;
 }
+
+.header-link {
+   @apply inline-block text-black dark:text-white transition-all duration-300 hover:text-red-600 dark:hover:text-red-600 active:text-red-600 dark:active:text-red-600;
+}
