@@ -1,5 +1,11 @@
-<section id="about" class="flex gap-5 flex-col py-3 825:flex-row">
-   <div class="text-center 825:basis-1/2 825:text-start">
+<section
+   id="about"
+   class="flex gap-5 relative flex-col py-3 825:flex-row opacity-0 translate-x-[30%] [animation:1000ms_ease_forwards_paused_show]"
+>
+   <span
+      class="intersection-point absolute top-[clamp(50vh,calc(100vh-100%+80px),50%)] h-[clamp(4px,calc(70%-150vh+100%-80px),70%)] left-0 block w-full -z-10"
+   ></span>
+   <div class="text-center 825:basis-1/2 825:text-start order-2 825:order-1">
       <h3
          data-translation="tech-title"
          class="text-black dark:text-white transition-all duration-300 font-bold text-3xl mb-5 825:text-4xl"
@@ -40,7 +46,7 @@
          <img class="max-w-[30%]" src="img/about/gitlogo.webp" alt="gitlogo" />
       </div>
    </div>
-   <div class="825:basis-1/2">
+   <div class="825:basis-1/2 order-1 825:order-2">
       <h3
          data-translation="personal-info-title"
          class="text-black dark:text-white transition-all duration-300 font-bold text-center text-3xl mb-5 825:text-4xl"

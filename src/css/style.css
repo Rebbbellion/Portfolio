@@ -22,3 +22,11 @@
 .header-link {
    @apply inline-block text-black dark:text-white transition-all duration-300 hover:text-red-600 dark:hover:text-red-600 active:text-red-600 dark:active:text-red-600;
 }
+
+
+@keyframes show {
+   to {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
