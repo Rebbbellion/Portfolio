@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-pt-20 h-screen">
+<html lang="en" class="scroll-pt-20 h-full">
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,8 +12,32 @@
       <title>Portfolio</title>
    </head>
    <body
-      class="font-playfair text-base font-normal lock:overflow-hidden lock:touch-none lock:overscroll-none h-screen"
+      style="overflow: hidden"
+      class="font-playfair text-base font-normal lock:overflow-hidden lock:touch-none lock:overscroll-none h-full"
    >
+      <div
+         id="loader"
+         style="
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 500ms;
+         "
+      >
+         <img
+            style="max-width: 20%; object-fit: contain"
+            src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2VhcXN1dG5pbjBlMGRqY2szb3BpNDAzNG9jcWU5dWl4ZzM1ZTZpcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/FgH5xSNjGHZsiYPWAX/giphy.gif"
+            alt="load"
+         />
+      </div>
       <div
          id="wrapper"
          class="min-h-full overflow-clip flex flex-col bg-white dark:bg-black transition-colors duration-300"
