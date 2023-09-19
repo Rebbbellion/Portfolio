@@ -20,8 +20,10 @@ function translateSite(targetEl) {
    i18next.changeLanguage(targetEl?.dataset.lng).then((t) => {
       if (!targetEl) {
          languageButtonToggle(null, i18next.resolvedLanguage);
+         document.documentElement.lang = i18next.resolvedLanguage;
       } else {
          languageButtonToggle(targetEl);
+         document.documentElement.lang = targetEl.dataset.lng;
       }
       elementsToTranslate.forEach((element) => {
          element.style.opacity = 0;
