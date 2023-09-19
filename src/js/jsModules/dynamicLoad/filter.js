@@ -44,8 +44,8 @@ function filterElements(elements) {
    const noMatchEl = document.getElementById('no-match');
    const matchingElements = getMatchingElements(elements, activeFilters);
    const existingElements = [...elementsParent.children];
-
    if (matchingElements.length === 0) {
+      noMatchEl.style.height = getComputedStyle(elementsParent).height;
       setTimeout(() => {
          noMatchEl.style.display = 'block';
          setTimeout(() => {

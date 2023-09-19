@@ -23,7 +23,7 @@
          "filter-all": "Усі",
          "filter-commercial": "Комерційні",
          "filter-pet": "Пет",
-         "no-project-text": "Результати відсутні для обраного фільтра"
+         "no-match": "Результати відсутні"
       },
       "innerHTML": {
          "$input-error": "Поле заповнено неправильно! Перевірте правильність даних та кількість символів.Мінімальна кількість символів: <span></span>",
@@ -69,7 +69,7 @@
          "filter-all": "All",
          "filter-commercial": "Commercial",
          "filter-pet": "Pet",
-         "no-project-text": "No results for the selected filter"
+         "no-match": "No results"
       },
       "innerHTML": {
          "$input-error": "Field filled out incorrectly! Check your data and amount of characters.Minimal amount of characters: <span></span>",
