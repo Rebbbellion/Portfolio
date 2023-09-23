@@ -1,8 +1,10 @@
+import { menuInertToggle } from '../initialLoad/accessibility';
 import { bodyLockToggle, bodyUnlock } from './bodyLock';
 
 function menuToggle() {
    bodyLockToggle();
    document.documentElement.classList.toggle('menu-open');
+	menuInertToggle()
 }
 
 window.addEventListener('resize', () => {

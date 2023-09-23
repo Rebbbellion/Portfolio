@@ -1,68 +1,69 @@
 export class DynamicAdapt {
    #type;
-   #оbjects;
-   #movedElClass;
+   #objects;
    #nodes;
-   #mediaQueries;
+   #currentBreakPointData;
    constructor(type) {
       this.#type = type;
    }
 
    init() {
-      this.#оbjects = [];
-      this.#movedElClass = 'moved';
+      this.#objects = [];
       this.#nodes = [...document.querySelectorAll('[data-dynad]')];
       this.#nodes.forEach((node) => {
-         const data = node.dataset.dynad.trim();
-         const dataArray = data.split(',');
-         const оbject = {};
-         оbject.element = node;
-         оbject.parent = node.parentNode;
-         оbject.destination = document.querySelector(`${dataArray[0].trim()}`);
-         оbject.breakpoint = dataArray[1] ? dataArray[1].trim() : '48';
-         оbject.place = dataArray[2] ? dataArray[2].trim() : 'last';
-         оbject.index = this.#indexInParent(оbject.parent, оbject.element);
-         this.#оbjects.push(оbject);
+         const dataArray = node.dataset.dynad.trim().split(';');
+         dataArray.forEach((data) => {
+            const dataSplit = data.split(',');
+            const object = {};
+            object.element = node;
+            object.parent = node.parentNode;
+            object.destination = document.querySelector(
+               `${dataSplit[0].trim()}`
+            );
+            object.breakpoint = dataSplit[1] ? dataSplit[1].trim() : '48';
+            object.mediaQuery = matchMedia(
+               `(${this.#type}-width:${object.breakpoint}rem)`
+            );
+            object.place = dataSplit[2] ? dataSplit[2].trim() : 'last';
+            object.index = this.#indexInParent(object.parent, object.element);
+            this.#objects.push(object);
+         });
       });
 
-      this.#mediaQueries = this.#оbjects
-         .map(
-            ({ breakpoint }) =>
-               `(${this.#type}-width: ${breakpoint}em),${breakpoint}`
-         )
-         .filter((item, index, self) => self.indexOf(item) === index);
-      this.#mediaQueries.forEach((media) => {
-         const mediaSplit = media.split(',');
-         const matchMedia = window.matchMedia(mediaSplit[0]);
-         const mediaBreakpoint = mediaSplit[1];
+      this.#arraySort(this.#objects);
+      this.#objects.forEach(({ mediaQuery }) => {
+         mediaQuery.onchange = () => {
+            this.#elementsHandler(this.#objects);
+         };
+      });
+      this.#elementsHandler(this.#objects);
+   }
 
-         const оbjectsFilter = this.#оbjects.filter(
-            ({ breakpoint }) => breakpoint === mediaBreakpoint
-         );
-         matchMedia.addEventListener('change', () => {
-            this.#mediaHandler(matchMedia, оbjectsFilter);
-         });
-         this.#mediaHandler(matchMedia, оbjectsFilter);
+   #arraySort(arr) {
+      arr.sort((a, b) => {
+         if (a.element === b.element) {
+            if (this.#type === 'min') {
+               return a.breakpoint - b.breakpoint;
+            } else {
+               return b.breakpoint - a.breakpoint;
+            }
+         }
       });
    }
 
-   #mediaHandler(matchMedia, оbjects) {
-      if (matchMedia.matches) {
-         оbjects.forEach((оbject) => {
-            // оbject.index = this.indexInParent(оbject.parent, оbject.element);
-            this.#moveTo(оbject.place, оbject.element, оbject.destination);
-         });
-      } else {
-         оbjects.forEach(({ parent, element, index }) => {
-            if (element.classList.contains(this.#movedElClass)) {
-               this.#moveBack(parent, element, index);
-            }
-         });
-      }
+   #elementsHandler(objects) {
+      objects.forEach((object, index) => {
+         if (object.mediaQuery.matches) {
+            this.#moveTo(object.place, object.element, object.destination);
+         } else if (object.element === objects[index - 1]?.element) {
+            return;
+         } else {
+            this.#moveBack(object.parent, object.element, object.index);
+         }
+      });
    }
 
    #moveTo(place, element, destination) {
-      element.classList.add(this.#movedElClass);
       if (place === 'last' || place >= destination.children.length) {
          destination.append(element);
          return;
@@ -75,7 +76,6 @@ export class DynamicAdapt {
    }
 
    #moveBack(parent, element, index) {
-      element.classList.remove(this.#movedElClass);
       if (parent.children[index] !== undefined) {
          parent.children[index].before(element);
       } else {

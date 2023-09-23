@@ -22,7 +22,7 @@
             class="block w-[2px] min-h-full bg-black dark:bg-white transition-colors duration-300 ml-3"
          ></span>
       </div>
-      <div
+      <button
          id="theme-pick"
          class="relative z-10 w-9 h-9 top-0 left-0 overflow-hidden"
       >
@@ -36,7 +36,21 @@
          >
             <use href="img/icons/sprite.svg#icon-sun"></use>
          </svg>
-      </div>
+      </button>
+		<button
+         id="burger"
+         class="block relative z-10 w-8 h-6 col-start-5 col-end-6 lg:hidden"
+      >
+         <span
+            class="absolute top-0 left-0 w-full h-[2px] bg-black dark:bg-white transition-all duration-300 menu-open:top-1/2 menu-open:rotate-45 menu-open:-translate-y-1/2"
+         ></span>
+         <span
+            class="absolute top-1/2 -translate-y-1/2 left-0 w-full h-[2px] bg-black dark:bg-white transition-all duration-300 menu-open:w-0"
+         ></span>
+         <span
+            class="absolute bottom-0 left-0 w-full h-[2px] bg-black dark:bg-white transition-all duration-300 menu-open:bottom-1/2 menu-open:-rotate-45 menu-open:translate-y-1/2"
+         ></span>
+      </button>
       <div
          id="navigation-body"
          class="text-6xl fixed top-0 left-full w-full h-full bg-slate-300 dark:bg-slate-800 pt-24 px-5 transition-all duration-300 overflow-visible lg:static lg:text-2xl lg:bg-transparent dark:lg:bg-transparent lg:w-auto lg:h-auto lg:p-0 menu-open:left-0"
@@ -69,7 +83,7 @@
                >
             </li>
             <button
-               data-dynad="#navigation,33,3"
+               data-dynad="#navigation,33,2;#navigation,64,last"
                class="z-10 text-black dark:text-white transition-all duration-300 border-2 border-solid border-black dark:border-white p-2 hover:text-red-600 hover:border-red-600 dark:hover:text-red-600 dark:hover:border-red-600 528:col-start-4 528:col-end-5 528:text-3xl"
                data-translation="contact"
                id="contact"
@@ -78,19 +92,5 @@
             </button>
          </ul>
       </div>
-      <button
-         id="burger"
-         class="block relative w-8 h-6 col-start-5 col-end-6 lg:hidden"
-      >
-         <span
-            class="absolute top-0 left-0 w-full h-[2px] bg-black dark:bg-white transition-all duration-300 menu-open:top-1/2 menu-open:rotate-45 menu-open:-translate-y-1/2"
-         ></span>
-         <span
-            class="absolute top-1/2 -translate-y-1/2 left-0 w-full h-[2px] bg-black dark:bg-white transition-all duration-300 menu-open:w-0"
-         ></span>
-         <span
-            class="absolute bottom-0 left-0 w-full h-[2px] bg-black dark:bg-white transition-all duration-300 menu-open:bottom-1/2 menu-open:-rotate-45 menu-open:translate-y-1/2"
-         ></span>
-      </button>
    </nav>
 </header>

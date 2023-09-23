@@ -1,5 +1,6 @@
 <div
    class="fixed group top-0 left-0 transition-all duration-300 w-full h-full invisible opacity-0 bg-black/70 dark:bg-zinc-500/70 z-[51] overflow-auto active:visible active:opacity-100"
+   tabindex="-1"
    id="popup"
 >
    <div
@@ -13,7 +14,6 @@
          <button
             id="close-button"
             class="absolute top-2 right-2 w-10 h-8"
-            tabindex="12"
          >
             <span
                class="block w-full top-1/2 bg-black dark:bg-white h-[2px] translate-y-1/2 rotate-45"
@@ -34,7 +34,6 @@
                   href="https://t.me/re_bbbellion"
                   target="_blank"
                   rel="noopener noreferrer"
-                  tabindex="1"
                >
                   <svg class="w-11 h-11 fill-black dark:fill-white">
                      <use href="img/icons/sprite.svg#icon-telegram"></use>
@@ -44,18 +43,17 @@
                   href="https://www.instagram.com/re_bbbellion"
                   target="_blank"
                   rel="noopener noreferrer"
-                  tabindex="2"
                >
                   <svg class="w-11 h-11 fill-black dark:fill-white">
                      <use href="img/icons/sprite.svg#icon-instagram"></use>
                   </svg>
                </a>
-               <a href="tel:+380997849835" tabindex="3">
+               <a href="tel:+380997849835">
                   <svg class="w-11 h-11 fill-black dark:fill-white">
                      <use href="img/icons/sprite.svg#icon-phone"></use>
                   </svg>
                </a>
-               <a href="mailto:dzhomaks@gmail.com" tabindex="4">
+               <a href="mailto:dzhomaks@gmail.com">
                   <svg class="w-11 h-11 fill-black dark:fill-white">
                      <use href="img/icons/sprite.svg#icon-email"></use>
                   </svg>
@@ -82,14 +80,13 @@
                   type="text"
                   name="Name"
                   id="name"
-                  class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black  duration-300 relative peer"
+                  class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black duration-300 relative peer"
                   required
                   placeholder="Ім'я"
                   data-translation="plh-name"
                   minlength="2"
                   maxlength="15"
                   pattern="[a-zA-Zа-яА-яіІїЇєЄёЁ'\s]{0,15}"
-                  tabindex="5"
                />
                <div
                   class="hidden -mt-2 pl-3 w-full text-sm text-red-600 peer-[.error]:block"
@@ -107,14 +104,13 @@
                   type="text"
                   name="Surname"
                   id="surname"
-                  class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black    peer"
+                  class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black peer"
                   required
                   placeholder="Прізвище"
                   data-translation="plh-surname"
                   minlength="2"
                   maxlength="15"
                   pattern="[a-zA-Zа-яА-яіІїЇєЄёЁ'\s]{0,15}"
-                  tabindex="6"
                />
                <div
                   class="hidden -mt-2 pl-3 w-full text-sm text-red-600 peer-[.error]:block"
@@ -132,14 +128,13 @@
                   type="tel"
                   name="Phone"
                   id="phone"
-                  class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black    peer"
+                  class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black peer"
                   required
                   placeholder="Починаючи з +"
                   data-translation="plh-phone"
                   minlength="8"
                   maxlength="20"
                   pattern="^\+[0-9]{0,20}"
-                  tabindex="7"
                />
                <div
                   class="hidden -mt-2 pl-3 w-full text-sm text-red-600 peer-[.error]:block"
@@ -157,14 +152,13 @@
                   type="email"
                   name="email"
                   id="E-mail"
-                  class="w-full h-12 p-3 outline-none border-2 border-solid peer border-black/50 rounded-xl dark:caret-black   "
+                  class="w-full h-12 p-3 outline-none border-2 border-solid peer border-black/50 rounded-xl dark:caret-black"
                   required
                   minlength="6"
                   maxlength="30"
                   placeholder="Електронна пошта"
                   data-translation="plh-email"
                   pattern="[a-z0-9\-]+@?[a-z0-9\-\.]{0,30}"
-                  tabindex="8"
                />
                <div
                   class="hidden -mt-2 pl-3 w-full text-sm text-red-600 peer-[.error]:block"
@@ -182,10 +176,9 @@
                   type="text"
                   name="Company"
                   id="company"
-                  class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black   "
+                  class="w-full h-12 p-3 outline-none border-2 border-solid border-black/50 rounded-xl dark:caret-black"
                   placeholder="Назва компанії"
                   data-translation="plh-company"
-                  tabindex="9"
                />
             </div>
             <div class="flex flex-col gap-2 items-start">
@@ -199,18 +192,16 @@
                   name="Comments"
                   id="comments"
                   rows="4"
-                  class="w-full p-3 outline-none border-2 border-solid resize-none border-black/50 rounded-xl dark:caret-black   "
+                  class="w-full p-3 outline-none border-2 border-solid resize-none border-black/50 rounded-xl dark:caret-black"
                   placeholder="Назва компанії"
                   data-translation="plh-comment"
-                  tabindex="10"
                ></textarea>
             </div>
             <button
                type="submit"
-               class="outline-none border-2 border-solid transition-all duration-300  focus:text-red-600  dark:focus:text-red-600 hover:border-red-600 hover:text-red-600 dark:hover:border-red-600 dark:hover:text-red-600 border-black dark:border-white rounded-xl text-black dark:text-white text-xl p-2 disabled:border-black/40 dark:disabled:border-white/40 disabled:text-black/40 dark:disabled:text-white/40 disabled:hover:border-black/40 dark:disabled:hover:border-white/40 disabled:hover:text-black/40 dark:disabled:hover:text-white/40"
+               class="outline-none border-2 border-solid transition-all duration-300 hover:border-red-600 hover:text-red-600 dark:hover:border-red-600 dark:hover:text-red-600 focus-visible:border-red-600 dark:focus-visible:border-red-600 focus-visible:outline-none focus-visible:text-red-600 dark:focus-visible:text-red-600 border-black dark:border-white rounded-xl text-black dark:text-white text-xl p-2 disabled:border-black/40 dark:disabled:border-white/40 disabled:text-black/40 dark:disabled:text-white/40 disabled:hover:border-black/40 dark:disabled:hover:border-white/40 disabled:hover:text-black/40 dark:disabled:hover:text-white/40"
                data-translation="send-to-email"
                disabled="true"
-               tabindex="11"
             >
                Відправити на мою пошту
             </button>
