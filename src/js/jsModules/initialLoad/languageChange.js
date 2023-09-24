@@ -41,7 +41,19 @@ function translateSite(targetEl) {
                });
                element.style.opacity = 1;
             }, 300);
-         } else {
+         } else if (element.dataset.translation.includes('aria-')) {
+            element.setAttribute(
+               'aria-label',
+               t(element.dataset.translation, { ns: 'aria-labels' })
+            );
+            element.style.opacity = 1;
+         } else if(element.dataset.translation.includes('alt-')){
+				element.setAttribute(
+               'alt',
+               t(element.dataset.translation, { ns: 'alt-text' })
+            );
+            element.style.opacity = 1;
+			} else {
             setTimeout(() => {
                element.textContent = t(element.dataset.translation, {
                   ns: 'text',
@@ -58,13 +70,17 @@ function languageButtonToggle(targetEl, activeLng) {
       if (!activeLng) {
          if (button.classList.contains('active')) {
             button.classList.remove('active');
+            button.setAttribute('aria-pressed', false);
          }
          targetEl.classList.add('active');
+         targetEl.setAttribute('aria-pressed', true);
       } else {
          if (button.dataset.lng !== activeLng) {
             button.classList.remove('active');
+            button.setAttribute('aria-pressed', false);
          } else {
             button.classList.add('active');
+            button.setAttribute('aria-pressed', true);
          }
       }
    });

@@ -1,3 +1,5 @@
+import i18next from 'i18next';
+
 const elementsParent = document.querySelector('#filter-elements');
 const elementsToFilter = [...elementsParent.children];
 const activeFilters = [
@@ -27,6 +29,11 @@ function filterButtonToggle(targetEl) {
 
 function setActiveFilters(filterButtons) {
    filterButtons.forEach((btn) => {
+      if (btn.classList.contains('active')) {
+         btn.setAttribute('aria-pressed', true);
+      } else {
+         btn.setAttribute('aria-pressed', false);
+      }
       activeFilters.forEach(([filter, set]) => {
          if (
             btn.classList.contains('active') &&
@@ -48,12 +55,14 @@ function filterElements(elements) {
       noMatchEl.style.height = getComputedStyle(elementsParent).height;
       setTimeout(() => {
          noMatchEl.style.display = 'block';
+         noMatchEl.textContent = i18next.t('no-match', { ns: 'text' });
          setTimeout(() => {
             noMatchEl.style.opacity = 1;
          }, 100);
       }, 300);
    } else {
       noMatchEl.style.opacity = 0;
+      noMatchEl.textContent = '';
       setTimeout(() => {
          noMatchEl.style.display = 'none';
       }, 300);

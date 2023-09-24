@@ -4,15 +4,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*:focus-visible{
-	outline: 5px solid rgb(220, 38, 38);
+*:focus-visible {
+   outline: 3px solid rgb(220, 38, 38);
 }
 .swiper-pagination {
    --swiper-pagination-color: rgb(220, 38, 38);
    --swiper-pagination-bottom: 0px;
    --swiper-pagination-right: 8px;
    --swiper-pagination-left: auto;
-   --swiper-pagination-bullet-size: 24px;
+   --swiper-pagination-bullet-size: 28px;
    --swiper-pagination-bullet-inactive-color: #000;
    --swiper-pagination-bullet-inactive-opacity: 1;
    --swiper-pagination-bullet-horizontal-gap: 12px;
@@ -22,7 +22,7 @@
 }
 
 .header-link {
-   @apply inline-block text-black dark:text-white transition-all duration-300 hover:text-red-600 dark:hover:text-red-600 active:text-red-600 dark:active:text-red-600;
+   @apply inline-block text-black dark:text-white transition-all duration-300 hover:text-red-600 dark:hover:text-red-600 active:text-red-600 dark:active:text-red-600 border-b-4 border-b-transparent active:border-b-4 active:border-b-red-600;
 }
 html {
    scrollbar-width: thin;

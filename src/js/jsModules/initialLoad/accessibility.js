@@ -2,12 +2,16 @@
 const navigationBodyEl = document.getElementById('navigation-body');
 const mainElement = document.querySelector('main');
 const menuMediaQuery = matchMedia('(max-width:64rem');
+const menuButton = document.getElementById('burger');
+
 function menuInertToggle() {
    if (menuMediaQuery.matches) {
       if (document.documentElement.classList.contains('menu-open')) {
          mainElement.inert = true;
          navigationBodyEl.inert = false;
+         menuButton.setAttribute('aria-expanded', true);
       } else {
+         menuButton.setAttribute('aria-expanded', false);
          mainElement.inert = false;
          navigationBodyEl.inert = true;
       }
@@ -36,4 +40,4 @@ function popupInertToggle() {
 }
 popupInertToggle();
 
-export { menuInertToggle,popupInertToggle };
+export { menuInertToggle, popupInertToggle };

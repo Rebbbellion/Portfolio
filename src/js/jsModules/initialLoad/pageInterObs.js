@@ -32,6 +32,7 @@ function linkDeActivate(targetEl) {
    pageLinks.forEach((link) => {
       if (link.href.split('#')[1] === targetEl.id) {
          link.classList.remove('active');
+         link.setAttribute('aria-pressed', false);
       }
    });
 }
@@ -39,6 +40,7 @@ function linkActivate(targetEl) {
    pageLinks.forEach((link) => {
       if (link.href.split('#')[1] === targetEl.id) {
          link.classList.add('active');
+         link.setAttribute('aria-pressed', true);
       }
    });
 }

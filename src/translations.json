@@ -43,6 +43,18 @@
          "plh-company": "Назва компанії",
          "plh-email": "Електронна пошта",
          "plh-comment": "Ваш текст тут"
+      },
+      "aria-labels": {
+         "aria-theme": "Обрати кольорову тему сайту",
+         "aria-menu": "Меню навігації сайту",
+         "aria-close-button": "Закрити вікно для зв'язку з автором",
+         "aria-contact-telegram": "Зв'язатись зі мною через телеграм",
+         "aria-contact-instagram": "Зв'язатись зі мною через інстаграм",
+         "aria-contact-phone": "Зв'язатись зі мною через телефон",
+         "aria-contact-mail": "Зв'язатись зі мною через почту"
+      },
+      "alt-text": {
+         "alt-my-photo": "Фото автора"
       }
    },
    "en": {
@@ -54,7 +66,7 @@
          "contact-via": "Contact me via:",
          "name": "Your name",
          "surname": "Your surname",
-         "phone": "Phone number",
+         "phone": "Phone number starting from +",
          "company": "Company",
          "email": "E-mail",
          "comment": "Comments,questions",
@@ -89,6 +101,18 @@
          "plh-company": "Company name",
          "plh-email": "E-mail",
          "plh-comment": "Your text here"
+      },
+      "aria-labels": {
+         "aria-theme": "Change site color theme",
+         "aria-menu": "Navigation menu of the site",
+         "aria-close-button": "Close window to contact with author",
+         "aria-contact-telegram": "Contact me via telegram",
+         "aria-contact-instagram": "Contact me via instagram",
+         "aria-contact-phone": "Contact me via phone",
+         "aria-contact-mail": "Contact me via mail"
+      },
+      "alt-text": {
+         "alt-my-photo": "Author Photo"
       }
    }
 }
