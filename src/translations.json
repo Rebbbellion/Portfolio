@@ -1,111 +1,112 @@
 {
-   "uk": {
-      "text": {
-         "home": "Головна",
-         "about": "Про мене",
-         "portfolio": "Портфоліо",
-         "contact": "Зв'язатись зі мною",
-         "contact-via": "Зв'яжіться зі мною через:",
-         "name": "Ваше ім'я",
-         "surname": "Ваше прізвище",
-         "company": "Компанія",
-         "email": "Електронна пошта",
-         "comment": "Коментарі,питання",
-         "send-to-email": "Надіслати на мою пошту",
-         "status-yes": "Дані надіслано.Дякую,що заповнили форму!",
-         "status-no": "Щось пішло не так :( Перевірте чи правильно введена електронна пошта",
-         "home-title": "Привіт! Я Максим Джосан",
-         "home-subtitle": "Фронт-енд розробник",
-         "home-description": "Я наполегливий у навчанні та роботі і завжди готовий вчитися та переймати досвід інших розробників. Буду радий довгій та продуктивній співпраці!",
-         "tech-title": "Технології які я використовую",
-         "personal-info-title": "Особиста інформація",
-         "filter-all": "Усі",
-         "filter-commercial": "Комерційні",
-         "filter-pet": "Пет",
-         "no-match": "Результати відсутні"
-      },
-      "innerHTML": {
-         "$input-error": "Поле заповнено неправильно! Перевірте правильність даних та кількість символів.Мінімальна кількість символів: <span></span>",
-         "$date-of-birth": "Дата народження: <time class=\"text-black dark:text-white transition-all duration-300 font-normal\" datetime=\"2002-09-27\">27 Вересня 2002</time>",
-         "$age": "Вік: <span  id=\"age\" class=\"text-black dark:text-white transition-all duration-300 font-normal\"></span>",
-         "$location": "Місцезнаходження: <a class=\"text-black dark:text-white transition-all duration-300 font-normal underline hover:text-red-600 dark:hover:text-red-600\" href=\"https://www.google.com.ua/maps/place/%D0%A0%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F,+%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+67400/@46.8546237,30.0749436,13z/data=!4m6!3m5!1s0x40c8e93ba54334a7:0xa896a346f704b6c0!8m2!3d46.8546237!4d30.0749436!16zL20vMDN5NXY4?entry=ttu\" target=\"_blank\" rel=\"noopener noreferrer\" >Роздільна, Одеська область, Україна</a >",
-         "$email": "Електронна пошта: <a class=\"text-black dark:text-white transition-all duration-300 font-normal underline hover:text-red-600 dark:hover:text-red-600\" href=\"mailto:dzhomaks@gmail.com\" >dzhomaks@gmail.com</a >",
-         "$languages": "Мови: <span class=\"text-black dark:text-white transition-all duration-300 font-normal\">Українська, Англійська, Російська</span>",
-         "$status": "Статус: <span class=\"text-black dark:text-white transition-all duration-300 font-normal\">Готовий до співпраці та працевлаштування</span>"
-      },
-      "placeholders": {
-         "plh-name": "Ім'я",
-         "plh-surname": "Прізвище",
-         "plh-phone": "Номер телефону починаючи з +",
-         "plh-company": "Назва компанії",
-         "plh-email": "Електронна пошта",
-         "plh-comment": "Ваш текст тут"
-      },
-      "aria-labels": {
-         "aria-theme": "Обрати кольорову тему сайту",
-         "aria-menu": "Меню навігації сайту",
-         "aria-close-button": "Закрити вікно для зв'язку з автором",
-         "aria-contact-telegram": "Зв'язатись зі мною через телеграм",
-         "aria-contact-instagram": "Зв'язатись зі мною через інстаграм",
-         "aria-contact-mail": "Зв'язатись зі мною через почту"
-      },
-      "alt-text": {
-         "alt-my-photo": "Фото автора"
-      }
-   },
-   "en": {
-      "text": {
-         "home": "Home",
-         "about": "About me",
-         "portfolio": "Portfolio",
-         "contact": "Contact me",
-         "contact-via": "Contact me via:",
-         "name": "Your name",
-         "surname": "Your surname",
-         "phone": "Phone number starting from +",
-         "company": "Company",
-         "email": "E-mail",
-         "comment": "Comments,questions",
-         "send-to-email": "Send to my e-mail",
-         "status-yes": "Data sended. Thank you for filling out this form!",
-         "status-no": "Something went wrong :( Check whether your e-mail is correct",
-         "home-title": "Hi! I am Maksym Dzhosan",
-         "home-subtitle": "Front-end developer",
-         "home-description": "I am zealous in studies and work and always ready to study and gain experience from other developers. I am looking forward to long-term and productive co-operation ",
-         "tech-title": "Technologies I use",
-         "personal-info-title": "Personal information",
-         "filter-all": "All",
-         "filter-commercial": "Commercial",
-         "filter-pet": "Pet",
-         "no-match": "No results"
-      },
-      "innerHTML": {
-         "$input-error": "Field filled out incorrectly! Check your data and amount of characters.Minimal amount of characters: <span></span>",
-         "$date-of-birth": "Date of birth: <time class=\"text-black dark:text-white transition-all duration-300 font-normal\" datetime=\"2002-09-27\">27 September 2002</time>",
-         "$age": "Age: <span  id=\"age\" class=\"text-black dark:text-white transition-all duration-300 font-normal\"></span>",
-         "$location": "Location: <a class=\"text-black dark:text-white transition-all duration-300 font-normal underline hover:text-red-600 dark:hover:text-red-600\" href=\"https://www.google.com.ua/maps/place/%D0%A0%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F,+%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+67400/@46.8546237,30.0749436,13z/data=!4m6!3m5!1s0x40c8e93ba54334a7:0xa896a346f704b6c0!8m2!3d46.8546237!4d30.0749436!16zL20vMDN5NXY4?entry=ttu\" target=\"_blank\" rel=\"noopener noreferrer\" >Rozdilna,Odesa region, Ukraine</a >",
-         "$email": "E-mail: <a class=\"text-black dark:text-white transition-all duration-300 font-normal underline hover:text-red-600 dark:hover:text-red-600\" href=\"mailto:dzhomaks@gmail.com\" >dzhomaks@gmail.com</a >",
-         "$languages": "Language: <span class=\"text-black dark:text-white transition-all duration-300 font-normal\">Ukrainian, English, Russian</span>",
-         "$status": "Status: <span class=\"text-black dark:text-white transition-all duration-300 font-normal\">Ready for stydying, co-operation and employment</span>"
-      },
-      "placeholders": {
-         "plh-name": "Name",
-         "plh-surname": "Surname",
-         "plh-phone": "Phone number starting from +",
-         "plh-company": "Company name",
-         "plh-email": "E-mail",
-         "plh-comment": "Your text here"
-      },
-      "aria-labels": {
-         "aria-theme": "Change site color theme",
-         "aria-menu": "Navigation menu of the site",
-         "aria-close-button": "Close window to contact with author",
-         "aria-contact-telegram": "Contact me via telegram",
-         "aria-contact-instagram": "Contact me via instagram",
-         "aria-contact-mail": "Contact me via mail"
-      },
-      "alt-text": {
-         "alt-my-photo": "Author Photo"
-      }
-   }
+  "uk": {
+    "text": {
+      "home": "Головна",
+      "about": "Про мене",
+      "portfolio": "Портфоліо",
+      "contact": "Зв'язатись зі мною",
+      "contact-via": "Зв'яжіться зі мною через:",
+      "name": "Ваше ім'я",
+      "surname": "Ваше прізвище",
+      "company": "Компанія",
+      "email": "Електронна пошта",
+      "comment": "Коментарі,питання",
+      "send-to-email": "Надіслати на мою пошту",
+      "status-yes": "Дані надіслано.Дякую,що заповнили форму!",
+      "status-no": "Щось пішло не так :( Перевірте чи правильно введена електронна пошта",
+      "home-title": "Привіт! Я Максим Джосан",
+      "home-subtitle": "Фронт-енд розробник",
+      "home-description": "Я наполегливий у навчанні та роботі і завжди готовий вчитися та переймати досвід інших розробників. Буду радий довгій та продуктивній співпраці!",
+      "tech-title": "Технології які я використовую",
+      "personal-info-title": "Особиста інформація",
+      "filter-all": "Усі",
+      "filter-commercial": "Комерційні",
+      "filter-pet": "Пет",
+      "no-match": "Результати відсутні"
+    },
+    "innerHTML": {
+      "$input-error": "Поле заповнено неправильно! Перевірте правильність даних та кількість символів.Мінімальна кількість символів: <span></span>",
+      "$date-of-birth": "Дата народження: <time class=\"text-black dark:text-white transition-all duration-300 font-normal\" datetime=\"2002-09-27\">27 Вересня 2002</time>",
+      "$age": "Вік: <span  id=\"age\" class=\"text-black dark:text-white transition-all duration-300 font-normal\"></span>",
+      "$location": "Місцезнаходження: <a class=\"text-black dark:text-white transition-all duration-300 font-normal underline hover:text-red-600 dark:hover:text-red-600\" href=\"https://www.google.com.ua/maps/place/%D0%A0%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F,+%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+67400/@46.8546237,30.0749436,13z/data=!4m6!3m5!1s0x40c8e93ba54334a7:0xa896a346f704b6c0!8m2!3d46.8546237!4d30.0749436!16zL20vMDN5NXY4?entry=ttu\" target=\"_blank\" rel=\"noopener noreferrer\" >Роздільна, Одеська область, Україна</a >",
+      "$email": "Електронна пошта: <a class=\"text-black dark:text-white transition-all duration-300 font-normal underline hover:text-red-600 dark:hover:text-red-600\" href=\"mailto:dzhomaks@gmail.com\" >dzhomaks@gmail.com</a >",
+      "$languages": "Мови: <span class=\"text-black dark:text-white transition-all duration-300 font-normal\">Українська, Англійська</span>",
+      "$status": "Статус: <span class=\"text-black dark:text-white transition-all duration-300 font-normal\">Готовий до співпраці та працевлаштування</span>"
+    },
+    "placeholders": {
+      "plh-name": "Ім'я",
+      "plh-surname": "Прізвище",
+      "plh-phone": "Номер телефону починаючи з +",
+      "plh-company": "Назва компанії",
+      "plh-email": "Електронна пошта",
+      "plh-comment": "Ваш текст тут"
+    },
+    "aria-labels": {
+      "aria-theme": "Обрати кольорову тему сайту",
+      "aria-menu": "Меню навігації сайту",
+      "aria-close-button": "Закрити вікно для зв'язку з автором",
+      "aria-contact-telegram": "Зв'язатись зі мною через телеграм",
+      "aria-contact-instagram": "Зв'язатись зі мною через інстаграм",
+      "aria-contact-mail": "Зв'язатись зі мною через почту"
+    },
+    "alt-text": {
+      "alt-my-photo": "Фото автора"
+    }
+  },
+  "en": {
+    "text": {
+      "home": "Home",
+      "about": "About me",
+      "portfolio": "Portfolio",
+      "contact": "Contact me",
+      "contact-via": "Contact me via:",
+      "name": "Your name",
+      "surname": "Your surname",
+      "phone": "Phone number starting from +",
+      "company": "Company",
+      "email": "E-mail",
+      "comment": "Comments,questions",
+      "send-to-email": "Send to my e-mail",
+      "status-yes": "Data sended. Thank you for filling out this form!",
+      "status-no": "Something went wrong :( Check whether your e-mail is correct",
+      "home-title": "Hi! I am Maksym Dzhosan",
+      "home-subtitle": "Front-end developer",
+      "home-description": "I am zealous in studies and work and always ready to study and gain experience from other developers. I am looking forward to long-term and productive co-operation ",
+      "tech-title": "Technologies I use",
+      "personal-info-title": "Personal information",
+      "filter-all": "All",
+      "filter-commercial": "Commercial",
+      "filter-pet": "Pet",
+      "no-match": "No results"
+    },
+    "innerHTML": {
+      "$input-error": "Field filled out incorrectly! Check your data and amount of characters.Minimal amount of characters: <span></span>",
+      "$date-of-birth": "Date of birth: <time class=\"text-black dark:text-white transition-all duration-300 font-normal\" datetime=\"2002-09-27\">27 September 2002</time>",
+      "$age": "Age: <span  id=\"age\" class=\"text-black dark:text-white transition-all duration-300 font-normal\"></span>",
+      "$location": "Location: <a class=\"text-black dark:text-white transition-all duration-300 font-normal underline hover:text-red-600 dark:hover:text-red-600\" href=\"https://www.google.com.ua/maps/place/%D0%A0%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F,+%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+67400/@46.8546237,30.0749436,13z/data=!4m6!3m5!1s0x40c8e93ba54334a7:0xa896a346f704b6c0!8m2!3d46.8546237!4d30.0749436!16zL20vMDN5NXY4?entry=ttu\" target=\"_blank\" rel=\"noopener noreferrer\" >Rozdilna,Odesa region, Ukraine</a >",
+      "$email": "E-mail: <a class=\"text-black dark:text-white transition-all duration-300 font-normal underline hover:text-red-600 dark:hover:text-red-600\" href=\"mailto:dzhomaks@gmail.com\" >dzhomaks@gmail.com</a >",
+      "$languages": "Language: <span class=\"text-black dark:text-white transition-all duration-300 font-normal\">Ukrainian, English</span>",
+      "$experience": "Commercial experience: <span class=\"text-black dark:text-white transition-all duration-300 font-normal\">None</span>",
+      "$status": "Status: <span class=\"text-black dark:text-white transition-all duration-300 font-normal\">Ready for co-operation and employment</span>"
+    },
+    "placeholders": {
+      "plh-name": "Name",
+      "plh-surname": "Surname",
+      "plh-phone": "Phone number starting from +",
+      "plh-company": "Company name",
+      "plh-email": "E-mail",
+      "plh-comment": "Your text here"
+    },
+    "aria-labels": {
+      "aria-theme": "Change site color theme",
+      "aria-menu": "Navigation menu of the site",
+      "aria-close-button": "Close window to contact with author",
+      "aria-contact-telegram": "Contact me via telegram",
+      "aria-contact-instagram": "Contact me via instagram",
+      "aria-contact-mail": "Contact me via mail"
+    },
+    "alt-text": {
+      "alt-my-photo": "Author Photo"
+    }
+  }
 }

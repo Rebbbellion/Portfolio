@@ -1,297 +1,295 @@
 <section
-   id="portfolio"
-   class="grid pt-6 relative pb-16 gap-6 opacity-0 translate-x-[30%] [animation:1000ms_ease_forwards_paused_show]"
+  id="portfolio"
+  class="grid pt-6 relative pb-16 gap-6 opacity-0 translate-x-[30%] [animation:1000ms_ease_forwards_paused_show]"
 >
-   <span
-      class="intersection-point absolute top-[clamp(50vh,calc(100vh-100%),50%)] h-[clamp(20%,calc(65%-150vh+100%-80px),65%)] left-0 block w-full -z-10"
-   ></span>
-   <h2
-      class="text-4xl text-black dark:text-white transition-all duration-300 justify-self-center font-bold"
-      data-translation="portfolio"
-   >
-      Портфоліо
-   </h2>
-   <div
-      id="filters"
-      class="flex gap-x-3 gap-y-5 text-2xl font-oswald flex-wrap"
-		aria-multiselectable="true"
-   >
-      <button
-         class="active active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl active:text-4xl"
-         data-filter="all"
-         data-translation="filter-all"
-         aria-pressed="true"
-      >
-         Усі
-      </button>
-      <button
-         class="active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl active:text-3xl"
-         data-filter="type:pet"
-         data-translation="filter-pet"
-			aria-pressed="false"
-      >
-         Пет
-      </button>
-      <button
-         class="active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl active:text-3xl"
-         data-filter="type:commercial"
-         data-translation="filter-commercial"
-			aria-pressed="false"
-      >
-         Комерційні
-      </button>
-      <button
-         class="active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl active:text-3xl"
-         data-filter="year:2023"
-			aria-pressed="false"
-      >
-         2023
-      </button>
-      <button
-         class="active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl active:text-3xl"
-         data-filter="year:2024"
-			aria-pressed="false"
-      >
-         2024
-      </button>
-   </div>
-   <div
-      id="no-match"
-      class="w-full opacity-0 hidden text-center text-black dark:text-white transition-all duration-300 text-4xl"
-      role="alert"
-   ></div>
-   <div
-      class="swiper w-full h-full min-w-0 pc:relative"
-   >
-      <ul
-         class="swiper-wrapper mobile:pb-14 pc:grid pc:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] pc:gap-6"
-         id="filter-elements"
-      >
-         <li class="swiper-slide" data-filter="type:pet,year:2024">
-            <a
-               href="https://rebbbellion.github.io/Angular-StopWatch/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
-               aria-labelledby="Angular StopWatch"
+  <span
+    class="intersection-point absolute top-[clamp(50vh,calc(100vh-100%),50%)] h-[clamp(20%,calc(65%-150vh+100%-80px),65%)] left-0 block w-full -z-10"
+  ></span>
+  <h2
+    class="text-4xl text-black dark:text-white transition-all duration-300 justify-self-center font-bold"
+    data-translation="portfolio"
+  >
+    Портфоліо
+  </h2>
+  <div
+    id="filters"
+    class="flex gap-x-3 gap-y-5 text-2xl font-oswald flex-wrap"
+    aria-multiselectable="true"
+  >
+    <button
+      class="active active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl active:text-4xl"
+      data-filter="all"
+      data-translation="filter-all"
+      aria-pressed="true"
+    >
+      Усі
+    </button>
+    <button
+      class="active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl active:text-3xl"
+      data-filter="type:pet"
+      data-translation="filter-pet"
+      aria-pressed="false"
+    >
+      Пет
+    </button>
+    <button
+      class="active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl active:text-3xl"
+      data-filter="type:commercial"
+      data-translation="filter-commercial"
+      aria-pressed="false"
+    >
+      Комерційні
+    </button>
+    <button
+      class="active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl active:text-3xl"
+      data-filter="year:2023"
+      aria-pressed="false"
+    >
+      2023
+    </button>
+    <button
+      class="active:text-red-600 text-black dark:text-white dark:active:text-red-600 transition-all duration-300 p-2 border-2 border-solid border-black dark:border-white active:border-red-600 dark:active:border-red-600 rounded-xl active:text-3xl"
+      data-filter="year:2024"
+      aria-pressed="false"
+    >
+      2024
+    </button>
+  </div>
+  <div
+    id="no-match"
+    class="w-full opacity-0 hidden text-center text-black dark:text-white transition-all duration-300 text-4xl"
+    role="alert"
+  ></div>
+  <div class="swiper w-full h-full min-w-0 pc:relative">
+    <ul
+      class="swiper-wrapper mobile:pb-14 pc:grid pc:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] pc:gap-6"
+      id="filter-elements"
+    >
+      <li class="swiper-slide" data-filter="type:pet,year:2024">
+        <a
+          href="https://rebbbellion.github.io/Angular-StopWatch/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
+          aria-labelledby="Angular StopWatch"
+        >
+          <figure>
+            <img
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              src="img/portfolio/AngularStopWatch.webp"
+              alt="Angular StopWatch Project"
+            />
+            <figcaption
+              id="AngularStopWatch"
+              class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
+              lang="en"
             >
-               <figure>
-                  <img
-                     class="absolute top-0 left-0 w-full h-full object-cover"
-                     src="img/portfolio/AngularStopWatch.webp"
-                     alt="Angular StopWatch Project"
-                  />
-                  <figcaption
-                     id="AngularStopWatch"
-                     class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
-                     lang="en"
-                  >
-                     AngularStopWatch
-                  </figcaption>
-               </figure>
-               <span
-                  aria-hidden="true"
-                  class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
-               ></span>
-            </a>
-         </li>
-         <li class="swiper-slide" data-filter="type:commercial,year:2023">
-            <a
-               href="https://rebbbellion.github.io/TestTaskforUSENSE/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
-               aria-labelledby="Test task for USENSE"
+              AngularStopWatch
+            </figcaption>
+          </figure>
+          <span
+            aria-hidden="true"
+            class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
+          ></span>
+        </a>
+      </li>
+      <li class="swiper-slide" data-filter="type:pet,year:2024">
+        <a
+          href="https://rebbbellion.github.io/TestTaskforUSENSE/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
+          aria-labelledby="Test task for usense"
+        >
+          <figure>
+            <img
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              src="img/portfolio/test-task-for-usense.jpg"
+              alt="Test task for USENSE"
+            />
+            <figcaption
+              id="Test task for USENSE"
+              class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
+              lang="en"
             >
-               <figure>
-                  <img
-                     class="absolute top-0 left-0 w-full h-full object-cover object-left"
-                     src="img/portfolio/TestTaskForUSENSE(Angular).webp"
-                     alt="Test Task for USENSE"
-                  />
-                  <figcaption
-                     id="projectName2"
-                     class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
-                     lang="en"
-                  >
-                    Test Task for USENSE
-                  </figcaption>
-               </figure>
-               <span
-                  aria-hidden="true"
-                  class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
-               ></span>
-            </a>
-         </li>
-         <li class="swiper-slide" data-filter="type:pet,year:2023">
-            <a
-               href="#"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
-               aria-labelledby="projectName3"
+              Test task for USENSE
+            </figcaption>
+          </figure>
+          <span
+            aria-hidden="true"
+            class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
+          ></span>
+        </a>
+      </li>
+      <li class="swiper-slide" data-filter="type:pet,year:2024">
+        <a
+          href="https://rebbbellion.github.io/Angular-TODO/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
+          aria-labelledby="Angular TODO"
+        >
+          <figure>
+            <img
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              src="img/portfolio/angular-todo.png"
+              alt="Angular TODO"
+            />
+            <figcaption
+              id="Angular TODO"
+              class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
+              lang="en"
             >
-               <figure>
-                  <img
-                     class="absolute top-0 left-0 w-full h-full object-cover"
-                     src="img/portfolio/empty.webp"
-                     alt="empty image"
-                  />
-                  <figcaption
-                     id="projectName3"
-                     class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
-                     lang="en"
-                  >
-                     Empty Card
-                  </figcaption>
-               </figure>
-               <span
-                  aria-hidden="true"
-                  class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
-               ></span>
-            </a>
-         </li>
-         <li class="swiper-slide" data-filter="type:commercial,year:2023">
-            <a
-               href="#"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
-               aria-labelledby="projectName4"
+              Angular TODO
+            </figcaption>
+          </figure>
+          <span
+            aria-hidden="true"
+            class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
+          ></span>
+        </a>
+      </li>
+      <li class="swiper-slide" data-filter="type:commercial,year:2023">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
+          aria-labelledby="projectName4"
+        >
+          <figure>
+            <img
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              src="img/portfolio/empty.webp"
+              alt="empty image"
+            />
+            <figcaption
+              id="projectName4"
+              class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
+              lang="en"
             >
-               <figure>
-                  <img
-                     class="absolute top-0 left-0 w-full h-full object-cover"
-                     src="img/portfolio/empty.webp"
-                     alt="empty image"
-                  />
-                  <figcaption
-                     id="projectName4"
-                     class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
-                     lang="en"
-                  >
-                     Empty Card
-                  </figcaption>
-               </figure>
-               <span
-                  aria-hidden="true"
-                  class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
-               ></span>
-            </a>
-         </li>
-         <li class="swiper-slide">
-            <a
-               href="#"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
-               aria-labelledby="projectName5"
+              Empty Card
+            </figcaption>
+          </figure>
+          <span
+            aria-hidden="true"
+            class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
+          ></span>
+        </a>
+      </li>
+      <li class="swiper-slide">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
+          aria-labelledby="projectName5"
+        >
+          <figure>
+            <img
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              src="img/portfolio/empty.webp"
+              alt="empty image"
+            />
+            <figcaption
+              id="projectName5"
+              class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
+              lang="en"
             >
-               <figure>
-                  <img
-                     class="absolute top-0 left-0 w-full h-full object-cover"
-                     src="img/portfolio/empty.webp"
-                     alt="empty image"
-                  />
-                  <figcaption
-                     id="projectName5"
-                     class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
-                     lang="en"
-                  >
-                     Empty Card
-                  </figcaption>
-               </figure>
-               <span
-                  aria-hidden="true"
-                  class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
-               ></span>
-            </a>
-         </li>
-         <li class="swiper-slide">
-            <a
-               href="#"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
-               aria-labelledby="projectName6"
+              Empty Card
+            </figcaption>
+          </figure>
+          <span
+            aria-hidden="true"
+            class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
+          ></span>
+        </a>
+      </li>
+      <li class="swiper-slide">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
+          aria-labelledby="projectName6"
+        >
+          <figure>
+            <img
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              src="img/portfolio/empty.webp"
+              alt="empty image"
+            />
+            <figcaption
+              id="projectName6"
+              class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
+              lang="en"
             >
-               <figure>
-                  <img
-                     class="absolute top-0 left-0 w-full h-full object-cover"
-                     src="img/portfolio/empty.webp"
-                     alt="empty image"
-                  />
-                  <figcaption
-                     id="projectName6"
-                     class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
-                     lang="en"
-                  >
-                     Empty Card
-                  </figcaption>
-               </figure>
-               <span
-                  aria-hidden="true"
-                  class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
-               ></span>
-            </a>
-         </li>
-         <li class="swiper-slide">
-            <a
-               href="#"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
-               aria-labelledby="projectName7"
+              Empty Card
+            </figcaption>
+          </figure>
+          <span
+            aria-hidden="true"
+            class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
+          ></span>
+        </a>
+      </li>
+      <li class="swiper-slide">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
+          aria-labelledby="projectName7"
+        >
+          <figure>
+            <img
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              src="img/portfolio/empty.webp"
+              alt="empty image"
+            />
+            <figcaption
+              id="projectName7"
+              class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
+              lang="en"
             >
-               <figure>
-                  <img
-                     class="absolute top-0 left-0 w-full h-full object-cover"
-                     src="img/portfolio/empty.webp"
-                     alt="empty image"
-                  />
-                  <figcaption
-                     id="projectName7"
-                     class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
-                     lang="en"
-                  >
-                     Empty Card
-                  </figcaption>
-               </figure>
-               <span
-                  aria-hidden="true"
-                  class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
-               ></span>
-            </a>
-         </li>
-         <li class="swiper-slide">
-            <a
-               href="#"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
-               aria-labelledby="projectName8"
+              Empty Card
+            </figcaption>
+          </figure>
+          <span
+            aria-hidden="true"
+            class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
+          ></span>
+        </a>
+      </li>
+      <li class="swiper-slide">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block relative pb-[70%] w-full border-8 border-double border-black dark:border-white transition-all duration-300"
+          aria-labelledby="projectName8"
+        >
+          <figure>
+            <img
+              class="absolute top-0 left-0 w-full h-full object-cover"
+              src="img/portfolio/empty.webp"
+              alt="empty image"
+            />
+            <figcaption
+              id="projectName8"
+              class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
+              lang="en"
             >
-               <figure>
-                  <img
-                     class="absolute top-0 left-0 w-full h-full object-cover"
-                     src="img/portfolio/empty.webp"
-                     alt="empty image"
-                  />
-                  <figcaption
-                     id="projectName8"
-                     class="text-black dark:text-white transition-colors duration-300 text-center absolute bottom-0 left-1/2 -translate-x-1/2 p-2 text-xl bg-white dark:bg-black"
-                     lang="en"
-                  >
-                     Empty Card
-                  </figcaption>
-               </figure>
-               <span
-                  aria-hidden="true"
-                  class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
-               ></span>
-            </a>
-         </li>
-      </ul>
-      <div class="swiper-pagination"></div>
-   </div>
+              Empty Card
+            </figcaption>
+          </figure>
+          <span
+            aria-hidden="true"
+            class="inline-block absolute -bottom-6 blur-sm left-1/2 -translate-x-1/2 border-b-[10px] border-b-black dark:border-b-white border-l-[50px] border-solid border-r-transparent border-l-transparent border-r-[50px] h-0 w-full transition-colors duration-300"
+          ></span>
+        </a>
+      </li>
+    </ul>
+    <div class="swiper-pagination"></div>
+  </div>
 </section>
